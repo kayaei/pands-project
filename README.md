@@ -38,3 +38,8 @@ See this link for the instructions: <https://github.com/kayaei/pands-project/blo
 5. Iris setosa species - <https://en.wikipedia.org/wiki/Iris_setosa>
 6. Iris versicolor species - <https://en.wikipedia.org/wiki/Iris_versicolor>
 7. Iris virginica species - <https://en.wikipedia.org/wiki/Iris_virginica>
+8. Iris Flower Data set '.csv' file - <https://gist.github.com/curran/a08a1080b88344b0c8a7>
+9. <https://archive.ics.uci.edu/ml/datasets/iris>
+10. <https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset>
+11. <https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html>
+12. <https://www.ritchieng.com/machine-learning-iris-dataset/>
