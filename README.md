@@ -2,7 +2,7 @@
 
 ## Fisher's Iris Data Set
 
-### Etem Kaya
+### Author: Etem Kaya
 
 #### Institution: GMIT Ireland
 
