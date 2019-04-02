@@ -1,9 +1,9 @@
 # Project 2019 - GMIT Data Analytics
 
-## Author: Etem Kaya                                                           Project: Iris Data Set - Project 2019
-## Institution: GMIT Ireland                                                   Course: Higher Diploma in Data Analytics
-## Module: Programming & Scripting                                             Year and Semester: 2019 - 01
-## Date Released: 02-Apr-2019                                                  Software and Version: Python - Version 3.7
+## Author: Etem Kaya  -                                                           Project: Iris Data Set - Project 2019
+## Institution: GMIT Ireland -                                                   Course: Higher Diploma in Data Analytics
+## Module: Programming & Scripting -                                              Year and Semester: 2019 - 01
+## Date Released: 02-Apr-2019 -                                                   Software and Version: Python - Version 3.7
 
 This repository contains my research, investigation and explorationinto of the Fisher's Iris Dataset along withy my analysis of the same dataset using the Pythin programming language for the Project 2019 required for the module "Programming and Scripting" at GMIT.
 
