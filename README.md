@@ -1,12 +1,8 @@
-# Project 2019 - GMIT Data Analytics
+# Project 2019
 
-##
+## Fisher's Iris Data Set
 
-###
-
-#### Author: Etem Kaya
-
-#### Project: Iris Data Set - Project 2019
+### Etem Kaya
 
 #### Institution: GMIT Ireland
 
