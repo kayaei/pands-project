@@ -8,7 +8,7 @@
 ## Year and Semester: 2019 - 01
 ## Software and Version: Python - Version 3.7
 
-This repository contains my research, investigation and explorationinto of the Fisher's Iris Dataset along withy my analysis of the same dataset using the Pythin programming language for the Project 2019 required for the module "Programming and Scripting" at GMIT.
+This repository contains my research, investigation and exploration of the Fisher's Iris Dataset along withy my analysis using Python programming language required for Project 2019, "Programming and Scripting" at GMIT.
 
 See this link for the instructions: (https://github.com/kayaei/pands-project/blob/master/project.pdf).
 
