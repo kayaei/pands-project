@@ -6,8 +6,18 @@
 # Import pandas library
 import pandas as pd
 
-# Import iris-dataset csv file with panda
+# Import dataset with panda
 f = pd.read_csv('iris.csv')
 
-# Print the entire iris-datase
-print(f)
+print("\n" + str(f.columns))                   # column names
+print("\n")
+print("\n" + str(f.info()))                    # information for all columns
+print("\n" + str(f.describe()))                # summary of each column
+print("\n" + str(f["species"].value_counts())) # row count in each species
+print("\n" + str(f.shape))                     # total row and column count
+print("\n" + str(f.head()))                    # print first 5 rows
+print("\n" + str(f.tail()))                    # print last 5 rows
+print("\n" + str(f.sample(5)))                 # output 5 random rows
+print("\n" + str(f.isnull().any()))            # find any null values
+print("\n" + str(f))                           # print the entire dataset
+
