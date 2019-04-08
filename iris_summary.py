@@ -11,6 +11,8 @@ f = pd.read_csv('iris.csv')
 
 print("\n" + str(f.info()))                    # information about the dataset
 print("\n" + str(f.describe()))                # summary of each species
+
+# adopted from https://priagungkhusumanegara.github.io/data/Data_Visualization.html
 print("\n" + str(f["species"].value_counts())) # row count in each species
 print("\n" + str(f.shape))                     # total row and column count
 print("\n" + str(f.head()))                    # print first 5 rows
