@@ -3,10 +3,16 @@
 
 # Pinrt Iris Dataset in Tabular format
 
-# Import pandas library
+# import pandas library
 import pandas as pd
 
-# Import dataset with panda
-iris = pd.read_csv('iris.csv')
+# import csv file with pandas
+iris = pd.read_csv('iris.csv') 
 
-print(iris) # print the entire dataset in tabular format
+print(iris) # print the entire dataset
+
+# convert csv file to a dataframe
+df = pd.DataFrame(iris) 
+
+print(df) # print the dataframe
+
