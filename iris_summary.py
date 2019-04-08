@@ -16,6 +16,8 @@ print("\n" + str(f.shape))                     # total row and column count
 print("\n" + str(f.head()))                    # print first 5 rows
 print("\n" + str(f.tail()))                    # print last 5 rows
 print("\n" + str(f.sample(5)))                 # output 5 random rows
+
+# adopted from https://stackoverflow.com/a/29530559
 print("\n" + str(f.isnull().any()))            # find any null values
 print("\n" + str(f.columns))                   # column names
 
