@@ -7,7 +7,7 @@ import pandas as pd
 import seaborn as sns
 
 # set style and colour using seaborn library
-sns.set(style="darkgrid", color_codes=True)
+sns.set(style="ticks", color_codes=True)
 
 # import iris dataset with Pandas
 f = pd.read_csv("iris.csv")
