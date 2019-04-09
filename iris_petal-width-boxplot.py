@@ -7,10 +7,10 @@ import pandas as pd
 import seaborn as sns
 
 # set style and colour using seaborn library
-sns.set(style="darkgrid", color_codes=True)
+sns.set(style="whitegrid", color_codes=True)
 
 # import iris dataset with Pandas
 f = pd.read_csv("iris.csv")
 
-# boxplot petal lenght
+# boxplot petal width
 sns.boxplot(x="species", y="petal_width", data=f)
