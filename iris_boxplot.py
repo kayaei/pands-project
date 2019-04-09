@@ -3,15 +3,21 @@
 # Irish Data Set Project.
 
 # Boxplot iris dataset
-# import pandas and seaborn libraries
+# import pandas, seaborn and matplotlib libraries
 import pandas as pd
 import seaborn as sns
-
-# set style and colour using seaborn library
-sns.set(style="darkgrid", color_codes=True)
+import matplotlib.pyplot as plt
 
 # import iris dataset with Pandas
 f = pd.read_csv("iris.csv")
 
-# boxplot grouped by species
-f.boxplot(by='species',figsize=(12,8)) 
+# set the boxplot graph for iris flower species
+plt.figure(figsize = (12, 8)) # set the graph size
+plt.title("Iris Flower Species BoxPlot") # title of the plot
+
+# set the boxplot style
+sns.set(style="darkgrid", color_codes=True) # set the background colour
+sns.boxplot(data=f) # set the dataset to plot     
+
+# plot the data
+plt.show()
