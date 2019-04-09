@@ -1,3 +1,4 @@
+#%%
 # Etem Kaya 08-Apr-2019
 # Irish Data Set Project.
 
@@ -12,5 +13,5 @@ sns.set(style="darkgrid", color_codes=True)
 # import iris dataset with Pandas
 f = pd.read_csv("iris.csv")
 
-# boxplot the petalwith
-sns.boxplot(x="species", y="petal_length", data=f)
+# boxplot grouped by species
+f.boxplot(by='species',figsize=(12,8)) 
