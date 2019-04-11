@@ -2,7 +2,7 @@
 
 # Etem Kaya 11-Apr-2019
 # Iris Data Set Project.
-# Analysing Iris Dataset with 'mean, max, min and median' functions
+# Splitting Iris Dataset using loc an diloc functions
 
 import pandas as pd # import pandas library
 import seaborn as sns # import seaborn library
