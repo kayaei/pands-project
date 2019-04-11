@@ -1,5 +1,5 @@
 # Etem Kaya 31-Mar-2019
-# Irish Data Set Project.
+# Iris Data Set Project.
 
 # Analysis of Iris Dataset
 

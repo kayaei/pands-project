@@ -1,6 +1,6 @@
 #%%
 # Etem Kaya 09-Apr-2019
-# Irish Data Set Project.
+# Iris Data Set Project.
 
 # import pandas and seaborn libraries
 import pandas as pd

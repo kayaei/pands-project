@@ -1,7 +1,7 @@
 # Etem Kaya 08-Apr-2019
-# Irish Data Set Project.
+# Iris Data Set Project.
 
-# Pinrt Iris Dataset in Tabular format
+# Print Iris Dataset in Tabular format
 
 # import pandas library
 import pandas as pd

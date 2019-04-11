@@ -1,6 +1,6 @@
 #%%
 # Etem Kaya 08-Apr-2019
-# Irish Data Set Project.
+# Iris Data Set Project.
 
 # Boxplot iris dataset
 # import pandas, seaborn and matplotlib libraries
@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 f = pd.read_csv("iris.csv")
 
 # set the boxplot graph for iris flower species
-plt.figure(figsize = (12, 8)) # set the graph size
+plt.figure(figsize = (10, 8)) # set the graph size
 plt.title("Iris Flower Species BoxPlot") # title of the plot
 
 # set the boxplot style
