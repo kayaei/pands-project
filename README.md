@@ -40,6 +40,7 @@ The Iris flower data set is a multivariate data set introduced by the British st
 This dataset is by far one of the best known and commonly used datasets in the Data Science as it is very famous and widely used by everyone trying to learn machine learning and statistics. It is sometimes called Anderson's Iris data set because Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers of three related species.
 The Iris dataset consists of 50 samples from each of three species of Iris (Iris setosa, Iris virginica and Iris versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimeters. The fifth column is the species of the flower observed. One flower species is linearly separable from the other two, but the other two are not linearly separable from each other.
 Based on the combination of these four features, Fisher developed a linear discriminant model to distinguish the species from each other, and based on Fisher's linear discriminant model, this data set became a typical test case for many statistical classification techniques in machine learning. For more history of this dataset, refer to Wikipedia.
+[I'm an inline-style link](https://www.google.com)
 
 ### 1.2. Objectives
 
