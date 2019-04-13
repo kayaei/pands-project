@@ -21,16 +21,19 @@ Virginica = f.loc[f["species"]=="virginica"]
 ax = sns.scatterplot(x="sepal_length", y="sepal_width", hue="species", data=Setosa)
 # set the title of the scatter plot
 plt.title("Scatter Plot - 'Sepal Length and Sepal Width' of Setosa")
+plt.xlabel('sepal_length' + "\nSetosa")
 plt.show()
 
 # set the parameters for the 'Versicolor - Sepal' scatter plot
 ax = sns.scatterplot(x="sepal_length", y="sepal_width", hue="species", data=Versicolor)
 # set the title of the scatter plot
 plt.title("Scatter Plot - 'Sepal Length and Sepal Width' of Versicolor")
+plt.xlabel('sepal_length' + "\nVersicolor")
 plt.show()
 
 # set the parameters for the 'Virginica - Sepal' scatter plot
 ax = sns.scatterplot(x="sepal_length", y="sepal_width", hue="species", data=Virginica)
 # set the title of the scatter plot
 plt.title("Scatter Plot - 'Sepal Length and Sepal Width' of Virginica")
+plt.xlabel('sepal_length' + "\nVirginica")
 plt.show()
