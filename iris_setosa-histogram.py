@@ -2,7 +2,7 @@
 # Etem Kaya 12-Apr-2019
 # Iris Data Set Project.
 
-# Histogram of Setosa flower
+# Histogram of Iris Setosa flower type
 
 # import pandas, seaborn and matplotlib libraries
 import pandas as pd
