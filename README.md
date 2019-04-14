@@ -86,7 +86,7 @@ f = sns.load_dataset("iris")
 ```
 #### 2.1.3. Summary of the Dataset
 
-I wrote below the python script to summarise the Iris Dataset in a nutshell. This code will give me a quick snapshot of the following charecteristics of the Iris dataset;
+I wrote the below python script to summarise the Iris Dataset in a nutshell. This code will give me a quick snapshot of the following charecteristics of the Iris dataset;
 1. Info: A brief information of the entire dataset e.g. name of all columns, total number of rows in each column, datatype in each column, total number of columns, data range and memory usage.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_information.jpg "Information of the dataset")
@@ -113,12 +113,17 @@ I wrote below the python script to summarise the Iris Dataset in a nutshell. Thi
 
 7. Columns: Lists the column names of the dataset
 
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_columns.jpg "Column names of the dataset")
+
 8. IsNull: Finds the null values of the dataset
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_isnull.jpg "Null values of the dataset")
 
 9. Value_Counts: Gives the row count of the dataset
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_row-count.jpg "Row count of the dataset")
 
+Iris dataset summary python script;
 
 ```pyton
 # Etem Kaya 31-Mar-2019
