@@ -88,28 +88,35 @@ f = sns.load_dataset("iris")
 
 I wrote below the python script to summarise the Iris Dataset in a nutshell. This code will give me a quick snapshot of the following charecteristics of the Iris dataset;
 1. Info: A brief information of the entire dataset e.g. name of all columns, total number of rows in each column, datatype in each column, total number of columns, data range and memory usage.
+
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_information.jpg "Information of the dataset")
 
 2. Description: A statistical summary of each numeric columns e.g. column names, row count, mean, min, max, standard deviation, 25%th, 50%th and 75%th percentile for numeric columns.
+
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_description.jpg "Description of the dataset")
 
 3. Shape: Dimension of the dataset e.g. the total number of rows and column in the dataset. 
+
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_shape.jpg "Dimension of the dataset")
 
 4. Head: Lists the top 5 rows from the dataset.
+
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_head.jpg "Top 5 rows of the dataset")
 
 5. Tail: Lists Last 5 rows from the dataset.
+
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_tail.jpg "Last 5 rows of the dataset")
 
 6. Sample: Lists Random 5 rows from the dataset.
+
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_sample.jpg "Random 5 rows of the dataset")
 
 7. Columns: Lists the column names of the dataset
 
-7. IsNull: Finds the null values of the dataset
+8. IsNull: Finds the null values of the dataset
 
-7. Value_Counts: Gives the row count of the dataset
+9. Value_Counts: Gives the row count of the dataset
+
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_row-count.jpg "Row count of the dataset")
 
 
