@@ -45,7 +45,7 @@ For more information on this dataset, refer to [Wikipedia](https://en.wikipedia.
 
 ### 1.2 Objectives
 
-The objective of this project is to research and explore Fisher's Iris Dataset and write Python code to analyse the dataset.
+The objective of this project is to research and explore Fisher's Iris Dataset and write Python code to analyse the dataset, and finally summarise it with our findings and conclusion.
 
 ## 2  Research and Analysis of Iris Dataset
 
@@ -54,11 +54,12 @@ The objective of this project is to research and explore Fisher's Iris Dataset a
 #### 2.1.1   Pyton Libraries
 
 In my Iris Dataset analysis, I used the following libraries;
+
 ##### Pandas
 The Panda is a very useful library when analyzing data with Python and is one of the most widely used packaged in data science. The pandas is a library and used for importing labelled data such as the iris data set. It makes data such as csv files much easier to work with as it will take in a a csv file and creates a python object. It is an open source. Further information can be found at the <http://pandas.pydata.org/>.
 
 ##### Numpy
-The NumPy is a fundamental package for scientific computation in python. It is particularly useful as a container for multidimensional data which makes NumPy arrays easy to work with, so it is much faster and easier to manipulate the NumPy arrays. This allows NumPy to seamlessly and speedily integrate with a wide variety of databases. NumPy is particularly useful for importing the data set as an array (matrix) or 'list of lists' on which various functions could be applied. For more information, refer to <https://docs.scipy.org/doc/numpy/index.html> and <https://www.numpy.org/>.
+The NumPy is a fundamental package for scientific computation in python. It is particularly useful as a container for multidimensional data which makes NumPy arrays easy to work with, so it is much faster and easier to manipulate the NumPy arrays. This allows NumPy to seamlessly integrate with a wide variety of databases. NumPy is particularly useful for importing the dataset as an array (matrix) or list on which various functions could be applied. For more information, refer to <https://docs.scipy.org/doc/numpy/index.html> and <https://www.numpy.org/>.
 
 ##### Matplotlib
 The Matplotlib python library is used to make charts such as histograms, plots and bar charts. The pyplot module is commonly used to generate some rich histograms graphs from the dataset given. For further information, refer to <https://matplotlib.org/>
