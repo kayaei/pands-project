@@ -47,11 +47,11 @@ For more information on this dataset, refer to [Wikipedia](https://en.wikipedia.
 
 The objective of this project is to research and explore Fisher's Iris Dataset and write Python code to analyse the dataset.
 
-## 2 Research and Analysis of Iris Dataset
+## 2  Research and Analysis of Iris Dataset
 
-### 2.1 Analysis of Iris Dataset
+### 2.1  Analysis of Iris Dataset
 
-#### 2.1.1 Pyton Libraries
+#### 2.1.1   Pyton Libraries
 
 In my Iris Dataset analysis, I used the following libraries;
 ##### Pandas
@@ -69,7 +69,7 @@ The Seaborn is a Python visualization library based on matplotlib. It provides a
 ##### Scikitlearn
 Although I didn’t need to use the Scikitlearn, it is a very useful library for carrying out machine learning in python as it contains many machine learning models which may be used to explore data sets. Scikitlearn already has built in code to handle the machine learning analysis of large data sets. Further information can be found at <http://scikit-learn.org/stable/tutorial/basic/tutorial.html>.
 
-#### 2.1.2 Reading the CSV File
+#### 2.1.2  Reading the CSV File
 
 I downloaded the Iris dataset from the <https://gist.github.com/curran/a08a1080b88344b0c8a7> GitHub repository. Once downloaded, I then stored it in a CSV file called 'iris_dataset.csv'. I mostly used the Pandas library to read the content of my 'iris_dataset' csv file by using the (f = pd.read_csv("iris_dataset.csv")) script in my python code and this worked well. In some occasions, I also used the Seaborn library to read the csv file with the (f = sns.load_dataset("iris")) script. This dataset I downloaded from the above-mentioned GitHub repository already included the column names, so I did not need to write any additional code to add the column names in my python scripts. However, as part of my research, I have found few different ways to add missing column names, but I did not need it in my case anyway. Here are the two examples of my python scripts to read the csv file iwht Pandas and Seaborn libraries;
 
@@ -86,15 +86,15 @@ f = pd.read_csv("iris.csv")
 f = sns.load_dataset("iris")
 ```
 
-### 2.2 Visulasation of Iris Dataset
+### 2.2   Visulasation of Iris Dataset
 
-#### 2.2.1 Scatter Plots
+#### 2.2.1  Scatter Plots
 
-#### 2.2.2 Box Plots
+#### 2.2.2  Box Plots
 
-#### 2.2.3 Histograms
+#### 2.2.3  Histograms
 
-## 3 References
+## 3  References
 
 1. Iris Flower Data set - <https://en.wikipedia.org/wiki/Iris_flower_data_set>
 2. Iris setosa photo - <https://en.wikipedia.org/wiki/Iris_setosa#/media/File:Kosaciec_szczecinkowaty_Iris_setosa.jpg>
