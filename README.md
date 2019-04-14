@@ -86,45 +86,7 @@ f = sns.load_dataset("iris")
 ```
 #### 2.1.3. Summary of the Dataset
 
-I wrote the below python script to summarise the Iris Dataset in a nutshell. This code will give me a quick snapshot of the following charecteristics of the Iris dataset;
-
-1. Info: A brief information of the entire dataset e.g. name of all columns, total number of rows in each column, datatype in each column, total number of columns, data range and memory usage.
-
-![alt text](https://github.com/kayaei/pands-project/blob/master/iris_information.jpg "Information of the dataset")
-
-2. Description: A statistical summary of each numeric columns e.g. column names, row count, mean, min, max, standard deviation, 25%th, 50%th and 75%th percentile for numeric columns.
-
-![alt text](https://github.com/kayaei/pands-project/blob/master/iris_description.jpg "Description of the dataset")
-
-3. Shape: Dimension of the dataset e.g. the total number of rows and column in the dataset. 
-
-![alt text](https://github.com/kayaei/pands-project/blob/master/iris_shape.jpg "Dimension of the dataset")
-
-4. Head: Lists the top 5 rows from the dataset.
-
-![alt text](https://github.com/kayaei/pands-project/blob/master/iris_head.jpg "Top 5 rows of the dataset")
-
-5. Tail: Lists Last 5 rows from the dataset.
-
-![alt text](https://github.com/kayaei/pands-project/blob/master/iris_tail.jpg "Last 5 rows of the dataset")
-
-6. Sample: Lists Random 5 rows from the dataset.
-
-![alt text](https://github.com/kayaei/pands-project/blob/master/iris_sample.jpg "Random 5 rows of the dataset")
-
-7. Columns: Lists the column names of the dataset
-
-![alt text](https://github.com/kayaei/pands-project/blob/master/iris_columns.jpg "Column names of the dataset")
-
-8. IsNull: Finds the null values of the dataset
-
-![alt text](https://github.com/kayaei/pands-project/blob/master/iris_isnull.jpg "Null values of the dataset")
-
-9. Value_Counts: Gives the row count of the dataset
-
-![alt text](https://github.com/kayaei/pands-project/blob/master/iris_row-count.jpg "Row count of the dataset")
-
-Iris dataset summary python script;
+I developed the below python script to summarise the Iris Dataset in brief. Here is the 'Summary' python script;
 
 ```pyton
 # Etem Kaya 31-Mar-2019
@@ -153,11 +115,59 @@ print("\n" + str(f.isnull().any()) + "\n") # find any null values
 print(f["species"].value_counts()) # row count in each species
 ```
 
+The above python script will give a quick snapshot of the following charecteristics of the Iris dataset;
+
+##### Info: 
+A brief information of the entire dataset e.g. name of all columns, total number of rows in each column, datatype in each column, total number of columns, data range and memory usage.
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_information.jpg "Information of the dataset")
+
+##### Description: 
+A statistical summary of each numeric columns e.g. column names, row count, mean, min, max, standard deviation, 25%th, 50%th and 75%th percentile for numeric columns.
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_description.jpg "Description of the dataset")
+
+##### Shape: 
+Dimension of the dataset e.g. the total number of rows and column in the dataset. 
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_shape.jpg "Dimension of the dataset")
+
+##### Head: 
+Lists the top 5 rows from the dataset.
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_head.jpg "Top 5 rows of the dataset")
+
+##### Tail: 
+Lists Last 5 rows from the dataset.
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_tail.jpg "Last 5 rows of the dataset")
+
+##### Sample: 
+Lists Random 5 rows from the dataset.
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_sample.jpg "Random 5 rows of the dataset")
+
+##### Columns: 
+Lists the column names of the dataset
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_columns.jpg "Column names of the dataset")
+
+##### IsNull: 
+Finds the null values of the dataset
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_isnull.jpg "Null values of the dataset")
+
+##### Value_Counts: 
+Gives the row count of the dataset
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_row-count.jpg "Row count of the dataset")
+
 #### 2.1.4. Statistics of the dataset
 
-I developed the below python script to statictically deep dive into the Iris dataset. This code will give me the following most widely used statictical attributes of the Iris dataset; 
+I developed the below python script to statictically deep dive into the Iris dataset. This code will give the following most widely used statictical attributes of the Iris dataset; 
  
-1. Mean: The mean of each numeric columns (sepal_length, sepal_width, petal_length, petal_width).
+##### Mean: 
+Mean of each numeric columns (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find the mean value of the numeric columns of the dataset. Here is the 'Mean' python script; 
 
 ```python
 # Etem Kaya 11-Apr-2019
@@ -217,7 +227,8 @@ print(f.iloc[100:150].mean()) # mean of virginica using iloc function
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_mean.jpg "Mean of the dataset")
  
-2. Statistics: Summary of mean, max, min, mode and median of each numeric colums (sepal_length, sepal_width, petal_length, petal_width).
+##### Statisticals: 
+Statistical summary of of the dataset e.g. mean, max, min, mode and median of each numeric colums (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find the statistical attributes e.g. mean, max, min, mode and median. Here is the 'Statistical' python script;
 
 ```python
 # Etem Kaya 11-Apr-2019
@@ -291,6 +302,8 @@ print("Median of all 3 Species")
 print(group.median())
 print("\n")
 ```
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_statistical.jpg "Statistical of the dataset")
 
 ### 2.2.   Visulasation of Iris Dataset
 
