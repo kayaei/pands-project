@@ -70,7 +70,7 @@ Although I didn’t need to use the Scikitlearn, it is a very useful library for
 
 #### 2.1.2.  Reading the CSV File
 
-I downloaded the Iris dataset from the <https://gist.github.com/curran/a08a1080b88344b0c8a7> GitHub repository. Once downloaded, I then stored it in a CSV file called 'iris_dataset.csv'. I mostly used the Pandas library to read the content of my 'iris_dataset' csv file by using the (f = pd.read_csv("iris_dataset.csv")) script in my python code and this worked well. In some occasions, I also used the Seaborn library to read the csv file with the (f = sns.load_dataset("iris")) script. This dataset I downloaded from the above-mentioned GitHub repository already included the column names, so I did not need to write any additional code to add the column names in my python scripts. However, as part of my research, I have found few different ways to add missing column names, but I did not need it in my case anyway. Here are the two examples of my python scripts to read the csv file iwht Pandas and Seaborn libraries;
+I downloaded the Iris dataset from the <https://gist.github.com/curran/a08a1080b88344b0c8a7> GitHub repository. Once downloaded, I then stored it in a CSV file called 'iris_dataset.csv'. I mostly used the Pandas library to read the content of my 'iris_dataset' csv file by using the (f = pd.read_csv("iris_dataset.csv")) script in my python code and this worked well. In few occasions, I also used the Seaborn library to read the csv file with the (f = sns.load_dataset("iris")) script. This dataset I downloaded already included the column names, so I did not need to write any additional code to add the column names in my python scripts. However, as part of my research, I have found few different ways to add missing column names, but I did not need it in my case anyway. Here are the two examples of my python scripts to read the csv file with Pandas and Seaborn libraries;
 
 ```python
 # import pandas library
@@ -86,7 +86,8 @@ f = sns.load_dataset("iris")
 ```
 #### 2.1.3. Summary of the Dataset
 
-I wrote below the python script to summarise the Iris Dataset in a nutshell. This code will give me a quick snapshot of the following charecteristics of the Iris dataset;
+I wrote the below python script to summarise the Iris Dataset in a nutshell. This code will give me a quick snapshot of the following charecteristics of the Iris dataset;
+
 1. Info: A brief information of the entire dataset e.g. name of all columns, total number of rows in each column, datatype in each column, total number of columns, data range and memory usage.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_information.jpg "Information of the dataset")
@@ -113,12 +114,17 @@ I wrote below the python script to summarise the Iris Dataset in a nutshell. Thi
 
 7. Columns: Lists the column names of the dataset
 
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_columns.jpg "Column names of the dataset")
+
 8. IsNull: Finds the null values of the dataset
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_isnull.jpg "Null values of the dataset")
 
 9. Value_Counts: Gives the row count of the dataset
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_row-count.jpg "Row count of the dataset")
 
+Iris dataset summary python script;
 
 ```pyton
 # Etem Kaya 31-Mar-2019
@@ -149,6 +155,142 @@ print(f["species"].value_counts()) # row count in each species
 
 #### 2.1.4. Statistics of the dataset
 
+I developed the below python script to statictically deep dive into the Iris dataset. This code will give me the following most widely used statictical attributes of the Iris dataset; 
+ 
+1. Mean: The mean of each numeric columns (sepal_length, sepal_width, petal_length, petal_width).
+
+```python
+# Etem Kaya 11-Apr-2019
+# Iris Data Set Project.
+# Analysing Iris Dataset with 'mean, max, min and median' functions
+
+import pandas as pd # import pandas library
+import seaborn as sns # import seaborn library
+
+# f = pd.read_csv("iris.csv") # import dataset with panda
+f = sns.load_dataset("iris") # this time import dataset with seaborn
+
+# finding mean of each attribute with pandas
+print("Finding mean using pandas", "\n")
+print("Mean of Sepal Length is", f["sepal_length"].mean())
+print("Mean of Sepal Width is", f["sepal_width"].mean())
+print("Mean of Petal Length is", f["petal_length"].mean())
+print("Mean of Petal Width is", f["petal_width"].mean())
+print("\n")
+
+# group the iris dataset by the species category
+group = f.groupby("species")
+
+# finding mean of each attribute for all 3 species using group function
+print("Finding mean using 'group' function", "\n")
+
+print("Mean of all 3 Species")
+print(group.mean())
+print("\n")
+
+# finding mean by splitting the dataset with loc function
+
+print("Finding mean of species using 'loc' function", "\n")
+
+print("Mean of Setosa species")
+print(f.loc[f["species"]=="setosa"].mean()) # mean of setosa using loc function
+print("\n")
+print("Mean of Versicolor species")
+print(f.loc[f["species"]=="versicolor"].mean()) # mean of versicolor using loc function
+print("\n")
+print("Mean of Virginica species")
+print(f.loc[f["species"]=="virginica"].mean()) # mean of virginica using loc function
+print("\n")
+
+# another way of finding mean by splitting the dataset with iloc function
+print("Finding mean of species using 'iloc' function", "\n")
+
+print("Mean of Setosa species")
+print(f.iloc[0:50].mean()) # mean of setosa using iloc function
+print("\n")
+print("Mean of Versicolor species")
+print(f.iloc[50:100].mean()) # mean of versicolor using iloc function
+print("\n")
+print("Mean of Virginica species")    
+print(f.iloc[100:150].mean()) # mean of virginica using iloc function
+```
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_mean.jpg "Mean of the dataset")
+ 
+2. Statistics: Summary of mean, max, min, mode and median of each numeric colums (sepal_length, sepal_width, petal_length, petal_width).
+
+```python
+# Etem Kaya 11-Apr-2019
+# Iris Data Set Project.
+# Analysing Iris Dataset with 'mean, max, min, median and mode' functions
+
+import pandas as pd # import pandas library
+import seaborn as sns # import seaborn library
+
+# f = pd.read_csv("iris.csv") # import dataset with panda
+f = sns.load_dataset("iris") # this time import dataset with seaborn
+
+# finding the mean of each attribute
+print("Mean of Sepal Length is", f["sepal_length"].mean())
+print("Mean of Sepal Width is", f["sepal_width"].mean())
+print("Mean of Petal Length is", f["petal_length"].mean())
+print("Mean of Petal Width is", f["petal_width"].mean())
+print("\n")
+
+# finding the max value of each attribute
+print("Max value of Sepal Length is", f["sepal_length"].max())
+print("Max value of Sepal Width is", f["sepal_width"].max())
+print("Max value of Petal Length is", f["petal_length"].max())
+print("Max value of Petal Width is", f["petal_width"].max())
+print("\n")
+
+# finding the min value of each attribute
+print("Min value of Sepal Length is", f["sepal_length"].min())
+print("Min value of Sepal Width is", f["sepal_width"].min())
+print("Min value of Petal Length is", f["petal_length"].min())
+print("Min value of Petal Width is", f["petal_width"].min())
+print("\n")
+
+# finding the median of each attribute
+print("Median of Sepal Length is", f["sepal_length"].median())
+print("Median of Sepal Width is", f["sepal_width"].median())
+print("Median of Petal Length is", f["petal_length"].median())
+print("Median of Petal Width is", f["petal_width"].median())
+print("\n")
+
+# finding the mode of each attribute
+print("Mode of Sepal Length is", f["sepal_length"].mode())
+print("\n")
+print("Mode of Sepal Width is", f["sepal_width"].mode())
+print("\n")
+print("Mode of Petal Length is", f["petal_length"].mode())
+print("\n")
+print("Mode of Petal Width is", f["petal_width"].mode())
+print("\n")
+
+# group the iris dataset by the species column
+group = f.groupby("species")
+
+# find the mean of each attribute for all 3 species
+print("Mean of all 3 Species")
+print(group.mean())
+print("\n")
+
+# find the max value of each attribute for all 3 species
+print("Max value of all 3 Species")
+print(group.max())
+print("\n")
+
+# find the min value of each attribute for all 3 species
+print("Min value of all 3 Species")
+print(group.min())
+print("\n")
+
+# find the median of each attribute for all 3 species
+print("Median of all 3 Species")
+print(group.median())
+print("\n")
+```
 
 ### 2.2.   Visulasation of Iris Dataset
 
