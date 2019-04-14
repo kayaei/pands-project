@@ -166,7 +166,7 @@ Gives the row count of the dataset
 
 I developed the below python script to statictically deep dive into the Iris dataset. This code will give the following most widely used statictical attributes of the Iris dataset; 
  
-##### Mean: 
+##### i. Mean: 
 Mean of each numeric columns (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find the mean value of the numeric columns of the dataset. This included 'loc' and 'iloc' methods from the Seaborn library. Here is the 'Mean' python script; 
 
 ```python
@@ -227,7 +227,7 @@ print(f.iloc[100:150].mean()) # mean of virginica using iloc function
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_mean.jpg "Mean of the dataset")
  
-##### Statisticals: 
+##### ii. Statisticals: 
 Statistical summary of the dataset e.g. mean, max, min, mode and median of each numeric colums (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find these statistical attributes. Here is the 'Statistical' python script;
 
 ```python
@@ -305,8 +305,8 @@ print("\n")
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_statistical.jpg "Statistical of the dataset")
 
-##### Pivot and Describe: 
-Similiar to above statistical summary of the dataset e.g. 'row count, mean, standard deviation, min, max, 25%th, 50%th and 75%th percentiles' of each numeric colums (sepal_length, sepal_width, petal_length, petal_width) as well as each species. I used the 'Pivot and Describe' methods from the Seaborn library to find the above statistical attributes. Here is the 'Pivot and Describe' python script;
+##### iii. Pivot and Describe: 
+Similiar to above statistical summary of the dataset with few more attributes e.g. 'row count, mean, standard deviation, min, max, 25%th, 50%th and 75%th percentiles' of each numeric colums (sepal_length, sepal_width, petal_length, petal_width) as well as each species. I used the 'Pivot and Describe' methods from the Seaborn library to find the above statistical attributes. Here is the 'Pivot and Describe' python script;
 
 ```python
 # Etem Kaya 11-Apr-2019
@@ -345,7 +345,309 @@ print(f.describe(), "\n")
 
 #### 2.2.2.  Box Plots
 
+I used the Boxplot method to plot the dataset and analyse it whether it is symmetric or skewed to the left or right. As we know from Data Analytics, a Boxplot is the visual representation of the statistical five number summary of a given data set. The five number summary includes;
+1. Min
+2. First Quartile
+3. Median (Second Quartile)
+4. Third Quartile
+5. Max 
+In a boxplot, the symmetric dataset shows the median roughly in the middle of the box. The median is generally shown by a solid line that cuts through the box in the boxplot. If the dataset is skewed, it shows a lopsided boxplot where the median cuts the box into two unequal pieces. If the longer part of the box is to the right (or above) the median, the data is said to be skewed right. If the longer part is to the left (or below) the median, the data is skewed left.
+
+The following are the 3 Boxplots that I generated for this project using Python;
+
+##### i. Boxplot All Species:
+The purpose of this to boxplot the entire dataset concidering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width* so all 4 boxplots is shown in a single graph. Here is the *Boxplot-All-Species* python script;
+
+```python
+# Etem Kaya 08-Apr-2019
+# Iris Data Set Project.
+
+# Boxplot iris dataset
+# import pandas, seaborn and matplotlib libraries
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# import iris dataset with Pandas
+f = pd.read_csv("iris.csv")
+
+# set the boxplot graph for iris flower species
+plt.figure(figsize = (10, 8)) # set the graph size
+plt.title("Iris Flower Species BoxPlot") # title of the plot
+
+# set the boxplot style
+sns.set(style="darkgrid", color_codes=True) # set the background colour
+sns.boxplot(data=f) # set the dataset to plot     
+
+# plot the data
+plt.show()
+```
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_boxplot-all-species.jpg "Boxplot-All-Species")
+
+##### ii. Boxplot Grouped:
+The purpose of this to boxplot Iris dataset on 4 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virnigica* treated seperately with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*. This results in having 4 seperate graphs with each containing 3 boxplots so a total of 12 individual boxplots altogether. Here is the *Boxplot-Grouped* python script;
+
+```python
+# Etem Kaya 09-Apr-2019
+# Iris Data Set Project.
+
+# Boxplot iris dataset
+# import pandas and seaborn libraries
+import pandas as pd
+import seaborn as sns
+
+# set style and colour using seaborn library
+sns.set(style="darkgrid", color_codes=True)
+
+# import iris dataset with Pandas
+f = pd.read_csv("iris.csv")
+
+# boxplot grouped by species
+f.boxplot(by='species',figsize=(12,8))
+```
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_boxplot-group-all-species.jpg "Boxplot-Grouped")
+
+##### iii. Boxplot Sepal:
+The purpose of this to boxplot the Iris dataset on 2 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virnigica*, treated seperately based on *Sepal* attribute only with its 2 sub-attributes *Sepal_length and Sepal_Width*. This results in having 2 seperate graphs with each containing 3 boxplots so a total of 6 individual boxplots altogether. Here is the *Boxplot-Sepal* python script;
+
+```python
+# Etem Kaya 09-Apr-2019
+# Iris Data Set Project.
+
+# import pandas, seaborn and matplotlib libraries
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# set style and colour using seaborn library
+sns.set(style="ticks", color_codes=True)
+
+# import iris dataset with Pandas
+f = pd.read_csv("iris.csv")
+
+# boxplot sepal lenght
+sns.boxplot(x="species", y="sepal_length", data=f)
+plt.show()
+
+# boxplot sepal width
+sns.boxplot(x="species", y="sepal_width", data=f)
+plt.show()
+```
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_boxplot-sepal.jpg "Boxplot-Sepal")
+
+##### iiii. Boxplot Petal:
+The purpose of this to boxplot the Iris dataset on 2 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virnigica* treated seperately based on *Petal* attribute only with its 2 sub-attributes *Petal_length and Petal_Width*. This results in having 2 seperate graphs with each containing 3 boxplots so a total of 6 individual boxplots altogether. Here is the *Boxplot-Petal* python script;
+
+```python
+# Etem Kaya 09-Apr-2019
+# Irish Data Set Project.
+
+# import pandas, seaborn and matplotlib libraries
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# set style and colour using seaborn library
+sns.set(style="darkgrid", color_codes=True)
+
+# import iris dataset with Pandas
+f = pd.read_csv("iris.csv")
+
+# boxplot petal lenght
+sns.boxplot(x="species", y="petal_length", data=f)
+plt.show()
+
+# boxplot petal width
+sns.boxplot(x="species", y="petal_width", data=f)
+plt.show()
+```
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_boxplot-petal.jpg "Boxplot-Petal")
+
 #### 2.2.3.  Histograms
+
+I used the Histogram method to graphically summarize and display the distribution of the Iris data set. As we know from Data Analytics, a histogram  is a vertical bar chart that depicts the distribution of a set of data and can be constructed by segmenting the range of the data into equal sized bins (e.g. segments, groups or classes). The vertical axis of the histogram is labeled "Count or Frequency" and indicates how many times the event occurred (the number of counts for each bin).
+
+On the other hand ,the horizontal axis of the histogram is labeled with the range of the numerical variables from our dataset. We then determine the number of data points that reside within each bin and that is how we construct the histogram chart. We used the histogram when we want to;
+• Summarize large data sets graphically
+• Compare measurements with specifications
+• Communicate information graphically
+• Assist in decision making
+
+The following are the 3 types Histograms that I generated for this project using Python;
+
+##### i. Histogram All Species:
+The purpose of this Histogram is to present the entire dataset concidering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with its 4 different attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*, so each attribute is shown in a sperate histogram so a total of 4 histograms altogether. Here is the *Histogram-All-Species* python script;
+
+```python
+# Etem Kaya 12-Apr-2019
+# Iris Data Set Project.
+
+# Histogram iris dataset
+
+# import pandas, seaborn and matplotlib libraries
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+# import iris dataset with Pandas
+f = pd.read_csv("iris.csv")
+
+# set style and background colour using seaborn library
+sns.set(style="darkgrid")
+
+sns.distplot(f["sepal_length"], color= "green")
+plt.title('Histogram - Sepal Length of All Species')
+plt.xlabel('Sepal_Length')
+plt.ylabel('count')
+plt.show()
+
+sns.distplot(f["sepal_width"], color= "blue")
+plt.title('Histogram - Sepal Width of All Species')
+plt.xlabel('Sepal_Width')
+plt.ylabel('count')
+plt.show()
+
+sns.distplot(f["petal_length"], color= "orange")
+plt.title('Histogram - Petal Length of All Species')
+plt.xlabel('Petal_Length')
+plt.ylabel('count')
+plt.show()
+
+sns.distplot(f["petal_width"], color= "red")
+plt.title('Histogram - Petal Width of All Species')
+plt.xlabel('Petal_Width')
+plt.ylabel('count')
+plt.show()
+```
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_histogram-all-species.jpg "Histogram-All-Species")
+
+##### ii. Histogram Grouped:
+The purpose of this Histogram is to present the entire dataset concidering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*, so each attribute is being the X axis in each histogram shown so a total of 4 histograms all grouped together and shown in a single graph. Here is the *Histogram-Grouped* python script;
+
+```python
+# Etem Kaya 11-Apr-2019
+# Iris Data Set Project.
+# Group Histogram graphs of Iris Dataset
+
+# import pandas, seaborn and matplotlib libraries
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# import dataset with pandas
+f = pd.read_csv("iris.csv") 
+
+# set the backround colur of the histogram graph
+sns.set(style="whitegrid")
+
+# set the bar colour, figure size and bin size of the graphs
+f.hist(color = "green", figsize = (12, 8), bins = 18)
+# plot the graph
+plt.show()       
+```
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_histogram-group-all-species.jpg "Histogram-Grouped")
+
+##### iii. Histogram Sepal:
+The purpose of this Histogram is to present each Iris species *Setosa, Versicolor and Virginica* seperately with each species having its own histogram so 3 histograms shown together. The variable of the histogram on the X axis is the *Sepal* attribute of the dataset. Since the *Sepal* has 2 sub-attributes *Sepal_Length* and *Sepal_Width*, the X axis of each graph is *Sepal_Length* and *Sepal_Width* respectively. So there are 2 seperate graphs with each showing 3 histograms one for each species of Iris flower dataset so a total of 6 histograms. Here is the *Histogram-Sepal* python script;
+
+```python
+# Etem Kaya 12-Apr-2019
+# Iris Data Set Project.
+
+# Histogram of Iris dataset Sepal length and width
+
+# import pandas, seaborn and matplotlib libraries
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# import iris dataset with Pandas
+f = pd.read_csv("iris.csv")
+
+# split 'Setosa, Versicolor and Virginica' dataset from the entire Iris dataset
+Setosa = f.loc[f["species"]=="setosa"]
+Versicolor = f.loc[f["species"]=="versicolor"]
+Virginica = f.loc[f["species"]=="virginica"]
+
+# set style and background colour using seaborn library
+sns.set(style="darkgrid")
+
+# Histogram of 'Setosa, Versicolor and Virginica' Sepal Length
+sns.distplot(Setosa["sepal_length"], color= "green")
+sns.distplot(Versicolor["sepal_length"], color= "blue")
+sns.distplot(Virginica["sepal_length"], color= "orange")
+plt.title("Histogram - Sepal Length of 'Setosa, Versicolor and Virginica'")
+plt.xlabel('Sepal_Length' + "\nSetosa, Versicolor and Virginica")
+plt.ylabel('count')
+plt.show()
+
+# Histogram of 'Setosa, Versicolor and Virginica' Sepal Width
+sns.distplot(Setosa["sepal_width"], color= "green")
+sns.distplot(Versicolor["sepal_width"], color= "blue")
+sns.distplot(Virginica["sepal_width"], color= "orange")
+plt.title("Histogram - Sepal Width of 'Setosa, Versicolor and Virginica'")
+plt.xlabel('Sepal_Width' + "\nSetosa, Versicolor and Virginica")
+plt.ylabel('count')
+plt.show()       
+```
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_histogram-sepal.jpg "Histogram-Sepal")
+
+##### iiii. Histogram Petal:
+The purpose of this Histogram is to present each Iris species *Setosa, Versicolor and Virginica* seperately with each species having its own histogram so 3 histograms shown together. The variable of the histogram on the X axis is the *Petal* attribute of the dataset. Since the *Petal* has 2 sub-attributes *Petal_Length* and *Petal_Width*), the X axis of each graph is *Petal_Length* and *Petal_Width* respectively. So there are 2 seperate graphs with each showing 3 histograms one for each species of Iris flower dataset so a total of 6 histograms. Here is the *Histogram-Petal* python script;
+
+```python
+# Etem Kaya 12-Apr-2019
+# Iris Data Set Project.
+
+# Histogram of Iris dataset Petal length and width
+
+# import pandas, seaborn and matplotlib libraries
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# import iris dataset with Pandas
+f = pd.read_csv("iris.csv")
+
+# split Setosa, Versicolor and Virginica dataset from the entire Iris dataset
+Setosa = f.loc[f["species"]=="setosa"]
+Versicolor = f.loc[f["species"]=="versicolor"]
+Virginica = f.loc[f["species"]=="virginica"]
+
+# set style and background colour using seaborn library
+sns.set(style="darkgrid")
+
+# Histogram of 'Setosa, Versicolor and Virginica' Petal Length
+sns.distplot(Setosa["petal_length"], color= "green")
+sns.distplot(Versicolor["petal_length"], color= "blue")
+sns.distplot(Virginica["petal_length"], color= "orange")
+plt.title("Histogram - Petal Length of 'Setosa, Versicolor and Virginica'")
+plt.xlabel('Petal_Length' + "\nSetosa, Versicolor and Virginica")
+plt.ylabel('count')
+plt.show()
+
+# Histogram of 'Setosa, Versicolor and Virginica' Petal Width
+sns.distplot(Setosa["petal_width"], color= "green")
+sns.distplot(Versicolor["petal_width"], color= "blue")
+sns.distplot(Virginica["petal_width"], color= "orange")
+plt.title("Histogram - Petal Width of 'Setosa, Versicolor and Virginica'")
+plt.xlabel('Petal_Width' + "\nSetosa, Versicolor and Virginica")
+plt.ylabel('count')
+plt.show()      
+```
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_histogram-petal.jpg "Histogram-Petal")
+
+
+
+
+
 
 ## 3  References
 
