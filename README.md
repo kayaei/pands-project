@@ -54,18 +54,23 @@ The objective of this project is to research and explore Fisher's Iris Dataset a
 In my Iris Dataset analysis, I used the following libraries;
 
 ##### Pandas
+
 The Panda is a very useful library when analyzing data with Python and is one of the most widely used packaged in data science. The pandas is a library and used for importing labelled data such as the iris data set. It makes data such as csv files much easier to work with as it will take in a a csv file and creates a python object. It is an open source. Further information can be found at the <http://pandas.pydata.org/>.
 
 ##### Numpy
+
 The NumPy is a fundamental package for scientific computation in python. It is particularly useful as a container for multidimensional data which makes NumPy arrays easy to work with, so it is much faster and easier to manipulate the NumPy arrays. This allows NumPy to seamlessly integrate with a wide variety of databases. NumPy is particularly useful for importing the dataset as an array (matrix) or list on which various functions could be applied. For more information, refer to <https://docs.scipy.org/doc/numpy/index.html> and <https://www.numpy.org/>.
 
 ##### Matplotlib
+
 The Matplotlib python library is used to make charts such as histograms, plots and bar charts. The pyplot module is commonly used to generate some rich histograms graphs from the dataset given. For further information, refer to <https://matplotlib.org/>
 
 ##### Seaborn
+
 The Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics. Further information can be found at <https://seaborn.pydata.org/index.html> and <https://seaborn.pydata.org/generated/seaborn.PairGrid.html#seaborn.PairGrid>.
 
 ##### Scikitlearn
+
 Although I didn’t need to use the Scikitlearn, it is a very useful library for carrying out machine learning in python as it contains many machine learning models which may be used to explore data sets. Scikitlearn already has built in code to handle the machine learning analysis of large data sets. Further information can be found at <http://scikit-learn.org/stable/tutorial/basic/tutorial.html>.
 
 #### 2.1.2.  Reading the CSV File
@@ -79,11 +84,12 @@ import pandas as pd
 import seaborn as sns 
 
 # load dataset with panda
-f = pd.read_csv("iris.csv") 
+f = pd.read_csv("iris.csv")
 
 # load dataset with seaborn
 f = sns.load_dataset("iris")
 ```
+
 #### 2.1.3. Summary of the Dataset
 
 I developed the below python script to summarise the Iris Dataset in brief. Here is the 'Summary' python script;
@@ -117,57 +123,67 @@ print(f["species"].value_counts()) # row count in each species
 
 The above python script will give a quick snapshot of the following charecteristics of the Iris dataset;
 
-##### Info: 
+##### Info:
+
 A brief information of the entire dataset e.g. name of all columns, total number of rows in each column, datatype in each column, total number of columns, data range and memory usage.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_information.jpg "Information of the dataset")
 
-##### Description: 
+##### Description:
+
 A statistical summary of each numeric columns e.g. 'column names, row count, mean, min, max, standard deviation, 25%th, 50%th and 75%th percentile' for numeric columns.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_description.jpg "Description of the dataset")
 
-##### Shape: 
+##### Shape:
+
 Dimension of the dataset e.g. the total number of rows and column in the dataset. 
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_shape.jpg "Dimension of the dataset")
 
-##### Head: 
+##### Head:
+
 Lists the top 5 rows from the dataset.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_head.jpg "Top 5 rows of the dataset")
 
-##### Tail: 
+##### Tail:
+
 Lists Last 5 rows from the dataset.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_tail.jpg "Last 5 rows of the dataset")
 
-##### Sample: 
+##### Sample:
+
 Lists Random 5 rows from the dataset.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_sample.jpg "Random 5 rows of the dataset")
 
-##### Columns: 
+##### Columns:
+
 Lists the column names of the dataset
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_columns.jpg "Column names of the dataset")
 
-##### IsNull: 
+##### IsNull:
+
 Finds the null values of the dataset
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_isnull.jpg "Null values of the dataset")
 
-##### Value_Counts: 
+##### Value_Counts:
+
 Gives the row count of the dataset
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_row-count.jpg "Row count of the dataset")
 
 #### 2.1.4. Statistics of the dataset
 
-I developed the below python script to statictically deep dive into the Iris dataset. This code will give the following most widely used statictical attributes of the Iris dataset; 
- 
-##### i. Mean: 
-Mean of each numeric columns (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find the mean value of the numeric columns of the dataset. This included 'loc' and 'iloc' methods from the Seaborn library. Here is the 'Mean' python script; 
+I developed the below python script to statictically deep dive into the Iris dataset. This code will give the following most widely used statictical attributes of the Iris dataset;
+
+##### i. Mean:
+
+Mean of each numeric columns (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find the mean value of the numeric columns of the dataset. This included 'loc' and 'iloc' methods from the Seaborn library. Here is the 'Mean' python script;
 
 ```python
 # Etem Kaya 11-Apr-2019
@@ -226,8 +242,9 @@ print(f.iloc[100:150].mean()) # mean of virginica using iloc function
 ```
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_mean.jpg "Mean of the dataset")
- 
-##### ii. Statisticals: 
+
+##### ii. Statisticals:
+
 Statistical summary of the dataset e.g. mean, max, min, mode and median of each numeric colums (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find these statistical attributes. Here is the 'Statistical' python script;
 
 ```python
@@ -305,7 +322,8 @@ print("\n")
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_statistical.jpg "Statistical of the dataset")
 
-##### iii. Pivot and Describe: 
+##### iii. Pivot and Describe:
+
 Similiar to above statistical summary of the dataset with few more attributes e.g. 'row count, mean, standard deviation, min, max, 25%th, 50%th and 75%th percentiles' of each numeric colums (sepal_length, sepal_width, petal_length, petal_width) as well as each species. I used the 'Pivot and Describe' methods from the Seaborn library to find the above statistical attributes. Here is the 'Pivot and Describe' python script;
 
 ```python
@@ -346,16 +364,18 @@ print(f.describe(), "\n")
 #### 2.2.2.  Box Plots
 
 I used the Boxplot method to plot the dataset and analyse it whether it is symmetric or skewed to the left or right. As we know from Data Analytics, a Boxplot is the visual representation of the statistical five number summary of a given data set. The five number summary includes;
+
 1. Min
 2. First Quartile
 3. Median (Second Quartile)
 4. Third Quartile
-5. Max 
+5. Max
 In a boxplot, the symmetric dataset shows the median roughly in the middle of the box. The median is generally shown by a solid line that cuts through the box in the boxplot. If the dataset is skewed, it shows a lopsided boxplot where the median cuts the box into two unequal pieces. If the longer part of the box is to the right (or above) the median, the data is said to be skewed right. If the longer part is to the left (or below) the median, the data is skewed left.
 
 The following are the 3 Boxplots that I generated for this project using Python;
 
 ##### i. Boxplot All Species:
+
 The purpose of this to boxplot the entire dataset concidering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width* so all 4 boxplots is shown in a single graph. Here is the *Boxplot-All-Species* python script;
 
 ```python
@@ -386,6 +406,7 @@ plt.show()
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_boxplot-all-species.jpg "Boxplot-All-Species")
 
 ##### ii. Boxplot Grouped:
+
 The purpose of this to boxplot Iris dataset on 4 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virnigica* treated seperately with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*. This results in having 4 seperate graphs with each containing 3 boxplots so a total of 12 individual boxplots altogether. Here is the *Boxplot-Grouped* python script;
 
 ```python
@@ -410,6 +431,7 @@ f.boxplot(by='species',figsize=(12,8))
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_boxplot-group-all-species.jpg "Boxplot-Grouped")
 
 ##### iii. Boxplot Sepal:
+
 The purpose of this to boxplot the Iris dataset on 2 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virnigica*, treated seperately based on *Sepal* attribute only with its 2 sub-attributes *Sepal_length and Sepal_Width*. This results in having 2 seperate graphs with each containing 3 boxplots so a total of 6 individual boxplots altogether. Here is the *Boxplot-Sepal* python script;
 
 ```python
@@ -439,6 +461,7 @@ plt.show()
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_boxplot-sepal.jpg "Boxplot-Sepal")
 
 ##### iiii. Boxplot Petal:
+
 The purpose of this to boxplot the Iris dataset on 2 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virnigica* treated seperately based on *Petal* attribute only with its 2 sub-attributes *Petal_length and Petal_Width*. This results in having 2 seperate graphs with each containing 3 boxplots so a total of 6 individual boxplots altogether. Here is the *Boxplot-Petal* python script;
 
 ```python
@@ -480,6 +503,7 @@ On the other hand ,the horizontal axis of the histogram is labeled with the rang
 The following are the 3 types Histograms that I generated for this project using Python;
 
 ##### i. Histogram All Species:
+
 The purpose of this Histogram is to present the entire dataset concidering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with its 4 different attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*, so each attribute is shown in a sperate histogram so a total of 4 histograms altogether. Here is the *Histogram-All-Species* python script;
 
 ```python
@@ -526,6 +550,7 @@ plt.show()
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_histogram-all-species.jpg "Histogram-All-Species")
 
 ##### ii. Histogram Grouped:
+
 The purpose of this Histogram is to present the entire dataset concidering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*, so each attribute is being the X axis in each histogram shown so a total of 4 histograms all grouped together and shown in a single graph. Here is the *Histogram-Grouped* python script;
 
 ```python
@@ -539,7 +564,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # import dataset with pandas
-f = pd.read_csv("iris.csv") 
+f = pd.read_csv("iris.csv")
 
 # set the backround colur of the histogram graph
 sns.set(style="whitegrid")
@@ -547,12 +572,13 @@ sns.set(style="whitegrid")
 # set the bar colour, figure size and bin size of the graphs
 f.hist(color = "green", figsize = (12, 8), bins = 18)
 # plot the graph
-plt.show()       
+plt.show()
 ```
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_histogram-group-all-species.jpg "Histogram-Grouped")
 
 ##### iii. Histogram Sepal:
+
 The purpose of this Histogram is to present each Iris species *Setosa, Versicolor and Virginica* seperately with each species having its own histogram so 3 histograms shown together. The variable of the histogram on the X axis is the *Sepal* attribute of the dataset. Since the *Sepal* has 2 sub-attributes *Sepal_Length* and *Sepal_Width*, the X axis of each graph is *Sepal_Length* and *Sepal_Width* respectively. So there are 2 seperate graphs with each showing 3 histograms one for each species of Iris flower dataset so a total of 6 histograms. Here is the *Histogram-Sepal* python script;
 
 ```python
@@ -593,12 +619,13 @@ sns.distplot(Virginica["sepal_width"], color= "orange")
 plt.title("Histogram - Sepal Width of 'Setosa, Versicolor and Virginica'")
 plt.xlabel('Sepal_Width' + "\nSetosa, Versicolor and Virginica")
 plt.ylabel('count')
-plt.show()       
+plt.show()
 ```
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_histogram-sepal.jpg "Histogram-Sepal")
 
 ##### iiii. Histogram Petal:
+
 The purpose of this Histogram is to present each Iris species *Setosa, Versicolor and Virginica* seperately with each species having its own histogram so 3 histograms shown together. The variable of the histogram on the X axis is the *Petal* attribute of the dataset. Since the *Petal* has 2 sub-attributes *Petal_Length* and *Petal_Width*), the X axis of each graph is *Petal_Length* and *Petal_Width* respectively. So there are 2 seperate graphs with each showing 3 histograms one for each species of Iris flower dataset so a total of 6 histograms. Here is the *Histogram-Petal* python script;
 
 ```python
@@ -639,7 +666,7 @@ sns.distplot(Virginica["petal_width"], color= "orange")
 plt.title("Histogram - Petal Width of 'Setosa, Versicolor and Virginica'")
 plt.xlabel('Petal_Width' + "\nSetosa, Versicolor and Virginica")
 plt.ylabel('count')
-plt.show()      
+plt.show()
 ```
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_histogram-petal.jpg "Histogram-Petal")
