@@ -123,7 +123,7 @@ A brief information of the entire dataset e.g. name of all columns, total number
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_information.jpg "Information of the dataset")
 
 ##### Description: 
-A statistical summary of each numeric columns e.g. column names, row count, mean, min, max, standard deviation, 25%th, 50%th and 75%th percentile for numeric columns.
+A statistical summary of each numeric columns e.g. 'column names, row count, mean, min, max, standard deviation, 25%th, 50%th and 75%th percentile' for numeric columns.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_description.jpg "Description of the dataset")
 
@@ -167,7 +167,7 @@ Gives the row count of the dataset
 I developed the below python script to statictically deep dive into the Iris dataset. This code will give the following most widely used statictical attributes of the Iris dataset; 
  
 ##### Mean: 
-Mean of each numeric columns (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find the mean value of the numeric columns of the dataset. Here is the 'Mean' python script; 
+Mean of each numeric columns (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find the mean value of the numeric columns of the dataset. This included 'loc' and 'iloc' methods from the Seaborn library. Here is the 'Mean' python script; 
 
 ```python
 # Etem Kaya 11-Apr-2019
@@ -228,7 +228,7 @@ print(f.iloc[100:150].mean()) # mean of virginica using iloc function
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_mean.jpg "Mean of the dataset")
  
 ##### Statisticals: 
-Statistical summary of of the dataset e.g. mean, max, min, mode and median of each numeric colums (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find the statistical attributes e.g. mean, max, min, mode and median. Here is the 'Statistical' python script;
+Statistical summary of the dataset e.g. mean, max, min, mode and median of each numeric colums (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find these statistical attributes. Here is the 'Statistical' python script;
 
 ```python
 # Etem Kaya 11-Apr-2019
@@ -304,6 +304,40 @@ print("\n")
 ```
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_statistical.jpg "Statistical of the dataset")
+
+##### Pivot and Describe: 
+Similiar to above statistical summary of the dataset e.g. 'row count, mean, standard deviation, min, max, 25%th, 50%th and 75%th percentiles' of each numeric colums (sepal_length, sepal_width, petal_length, petal_width) as well as each species. I used the 'Pivot and Describe' methods from the Seaborn library to find the above statistical attributes. Here is the 'Pivot and Describe' python script;
+
+```python
+# Etem Kaya 11-Apr-2019
+# Iris Data Set Project.
+# Analyse Iris Dataset with 'pivot and describe' methods
+
+import pandas as pd # import pandas library
+import seaborn as sns # import seaborn library
+import numpy as np
+
+# f = pd.read_csv("iris.csv") # import dataset with panda
+f = sns.load_dataset("iris") # this time import dataset with seaborn
+
+# pivoting the dataset with describe method based on the species column
+print("Pivot the dataframe based on the values in the 'sepal_length' column", "\n")
+print(f.pivot(columns='species', values='sepal_length').describe(), "\n")
+print("Pivot the dataframe based on the values in the 'sepal_width' column", "\n")
+print(f.pivot(columns='species', values='sepal_width').describe(), "\n")
+print("Pivot the dataframe based on the values in the 'petal_length' column", "\n")
+print(f.pivot(columns='species', values='petal_length').describe(), "\n")
+print("Pivot the dataframe based on the values in the 'petal_width' column", "\n")
+print(f.pivot(columns='species', values='petal_width').describe(), "\n")
+print("Pivot the dataframe based on the values in the 'species' column", "\n")
+print(f.pivot(columns='species', values='species').describe(), "\n")
+
+# describe entire dataset for all species
+print("Describe the entire dataframe", "\n")
+print(f.describe(), "\n")
+```
+
+![alt text](https://github.com/kayaei/pands-project/blob/master/iris_describe.jpg "Pivot and Describe of the dataset")
 
 ### 2.2.   Visulasation of Iris Dataset
 
