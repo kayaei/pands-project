@@ -28,7 +28,7 @@ See this link for the instructions: <https://github.com/kayaei/pands-project/blo
 1. First install the Python (recommended to install it through Anaconda as it comes with some of the built in libraries).
 2. Install the Visual Studio Code.
 3. Install a command line interpreter (Cmder is recommended but others can also be used).
-4. Install the necessary Python libraries e.g. 'Pandas, Matplotlib, Numpy, Seaborn etc.) as required.
+4. Install the necessary Python libraries e.g. 'Pandas, Matplotlib, NumPy, Seaborn etc.) as required.
 
 ## 1. Introduction
 
@@ -40,7 +40,7 @@ This dataset is by far one of the best known and commonly used datasets in the D
 
 The dataset consists of 50 samples from each of three species of Iris ([Setosa](https://github.com/kayaei/pands-project/blob/master/iris_setosa.jpg), [Versicolor](https://github.com/kayaei/pands-project/blob/master/iris_versicolor.jpg) and [Virginica](https://github.com/kayaei/pands-project/blob/master/iris_virginica.jpg)).
 
-Four features were measured from each sample: the length and the width of the [Sepals and Petals](https://github.com/kayaei/pands-project/blob/master/iris_petal-sepal.jpg), in centimeters. The fifth column is the species names of the flower observed. Based on the combination of these four features, Fisher developed a linear discriminant model to distinguish the species from each other, and based on Fisher's linear discriminant model, this data set became a typical test case for many statistical classification techniques in machine learning.
+Four features were measured from each sample: the length and the width of the [Sepals and Petals](https://github.com/kayaei/pands-project/blob/master/iris_petal-sepal.jpg), in centimetres. The fifth column is the species names of the flower observed. Based on the combination of these four features, Fisher developed a linear discriminant model to distinguish the species from each other, and based on Fisher's linear discriminant model, this data set became a typical test case for many statistical classification techniques in machine learning.
 For more information on this dataset, refer to [Wikipedia](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
 Iris Flower Species;
@@ -56,25 +56,25 @@ The objective of this project is to research and explore Fisher's Iris Dataset a
 
 ### 2.1. Analysis of Iris Dataset
 
-#### 2.1.1. Pyton Libraries
+#### 2.1.1. Python Libraries
 
 In my Iris Dataset analysis, I used the following libraries;
 
 ##### i. Pandas
 
-The Panda is a very useful library when analyzing data with Python and is one of the most widely used packaged in data science. The pandas is a library and used for importing labelled data such as the iris data set. It makes data such as csv files much easier to work with as it will take in a a csv file and creates a python object. It is an open source. Further information can be found at the <http://pandas.pydata.org/>.
+The Panda is a very useful library when analysing data with Python and is one of the most widely used packaged in data science. The pandas is a library and used for importing labelled data such as the iris data set. It makes data such as csv files much easier to work with as it will take in a a csv file and creates a python object. It is an open source. Further information can be found at the <http://pandas.pydata.org/>.
 
-##### ii. Numpy
+##### ii. NumPy
 
 The NumPy is a fundamental package for scientific computation in python. It is particularly useful as a container for multidimensional data which makes NumPy arrays easy to work with, so it is much faster and easier to manipulate the NumPy arrays. This allows NumPy to seamlessly integrate with a wide variety of databases. NumPy is particularly useful for importing the dataset as an array (matrix) or list on which various functions could be applied. For more information, refer to <https://docs.scipy.org/doc/numpy/index.html> and <https://www.numpy.org/>.
 
 ##### iii. Matplotlib
 
-The Matplotlib python library is used to make charts such as histograms, plots and bar charts. The pyplot module is commonly used to generate some rich histograms graphs from the dataset given. For further information, refer to <https://matplotlib.org/>
+The Matplotlib python library is used to make charts such as histograms, plots and bar charts. The 'pyplot' module is commonly used to generate some rich histograms graphs from the dataset given. For further information, refer to <https://matplotlib.org/>
 
 ##### iv. Seaborn
 
-The Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics. Further information can be found at <https://seaborn.pydata.org/index.html> and <https://seaborn.pydata.org/generated/seaborn.PairGrid.html#seaborn.PairGrid>.
+The Seaborn is a Python visualization library based on Matplotlib. It provides a high-level interface for drawing attractive statistical graphics. Further information can be found at <https://seaborn.pydata.org/index.html> and <https://seaborn.pydata.org/generated/seaborn.PairGrid.html#seaborn.PairGrid>.
 
 ##### v. Scikitlearn
 
@@ -128,7 +128,7 @@ print("\n" + str(f.isnull().any()) + "\n") # find any null values
 print(f["species"].value_counts()) # row count in each species
 ```
 
-The above python script will give a quick snapshot of the following charecteristics of the Iris dataset;
+The above python script will give a quick snapshot of the following characteristics of the Iris dataset;
 
 ##### i. Info
 
@@ -186,7 +186,7 @@ Gives the row count of the dataset
 
 #### 2.1.4. Statistics of the dataset
 
-I developed the below python script to statictically deep dive into the Iris dataset. This code will give the following most widely used statictical attributes of the Iris dataset;
+I developed the below python script to statistically deep dive into the Iris dataset. This code will give the following most widely used statistical attributes of the Iris dataset;
 
 ##### i. Mean
 
@@ -250,9 +250,9 @@ print(f.iloc[100:150].mean()) # mean of virginica using iloc function
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_mean.jpg "Mean of the dataset")
 
-##### ii. Statisticals
+##### ii. Statistical
 
-Statistical summary of the dataset e.g. mean, max, min, mode and median of each numeric colums (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find these statistical attributes. Here is the 'Statistical' python script;
+Statistical summary of the dataset e.g. mean, max, min, mode and median of each numeric columns (sepal_length, sepal_width, petal_length, petal_width). I used a few different ways to find these statistical attributes. Here is the 'Statistical' python script;
 
 ```python
 # Etem Kaya 11-Apr-2019
@@ -331,7 +331,7 @@ print("\n")
 
 ##### iii. Pivot and Describe
 
-Similiar to above statistical summary of the dataset with few more attributes e.g. 'row count, mean, standard deviation, min, max, 25%th, 50%th and 75%th percentiles' of each numeric colums (sepal_length, sepal_width, petal_length, petal_width) as well as each species. I used the 'Pivot and Describe' methods from the Seaborn library to find the above statistical attributes. Here is the 'Pivot and Describe' python script;
+Similar to above statistical summary of the dataset with few more attributes e.g. 'row count, mean, standard deviation, min, max, 25%th, 50%th and 75%th percentiles' of each numeric columns (sepal_length, sepal_width, petal_length, petal_width) as well as each species. I used the 'Pivot and Describe' methods from the Seaborn library to find the above statistical attributes. Here is the 'Pivot and Describe' python script;
 
 ```python
 # Etem Kaya 11-Apr-2019
@@ -364,7 +364,7 @@ print(f.describe(), "\n")
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_describe.jpg "Pivot and Describe of the dataset")
 
-### 2.2. Visulasation of Iris Dataset
+### 2.2. Visualisation of Iris Dataset
 
 #### 2.2.1. Box Plots
 
@@ -381,7 +381,7 @@ The following are the 4 Boxplots that I generated for this project using Python;
 
 ##### i. Boxplot All Species
 
-The purpose of this Boxplot is to plot the entire dataset concidering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width* so all 4 boxplots is shown in a single graph. Here is the *Boxplot-All-Species* python script;
+The purpose of this Boxplot is to plot the entire dataset considering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width* so all 4 boxplots is shown in a single graph. Here is the *Boxplot-All-Species* python script;
 
 ```python
 # Etem Kaya 08-Apr-2019
@@ -412,7 +412,7 @@ plt.show()
 
 ##### ii. Boxplot Grouped
 
-The purpose of this Boxplot is to plot Iris dataset on 4 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virnigica* treated seperately with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*. This results in having 4 seperate graphs with each containing 3 boxplots so a total of 12 individual boxplots altogether. Here is the *Boxplot-Grouped* python script;
+The purpose of this Boxplot is to plot Iris dataset on 4 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virginica* treated separately with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*. This results in having 4 separate graphs with each containing 3 boxplots so a total of 12 individual boxplots altogether. Here is the *Boxplot-Grouped* python script;
 
 ```python
 # Etem Kaya 09-Apr-2019
@@ -437,7 +437,7 @@ f.boxplot(by='species',figsize=(12,8))
 
 ##### iii. Boxplot Sepal
 
-The purpose of this Boxplot is to plot the Iris dataset on 2 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virnigica*, treated seperately based on *Sepal* attribute only with its 2 sub-attributes *Sepal_length and Sepal_Width*. This results in having 2 seperate graphs with each containing 3 boxplots so a total of 6 individual boxplots altogether. Here is the *Boxplot-Sepal* python script;
+The purpose of this Boxplot is to plot the Iris dataset on 2 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virginica*, treated separately based on *Sepal* attribute only with its 2 sub-attributes *Sepal_length and Sepal_Width*. This results in having 2 separate graphs with each containing 3 boxplots so a total of 6 individual boxplots altogether. Here is the *Boxplot-Sepal* python script;
 
 ```python
 # Etem Kaya 09-Apr-2019
@@ -467,7 +467,7 @@ plt.show()
 
 ##### iv. Boxplot Petal
 
-The purpose of this Boxplot is to plot the Iris dataset on 2 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virnigica* treated seperately based on *Petal* attribute only with its 2 sub-attributes *Petal_length and Petal_Width*. This results in having 2 seperate graphs with each containing 3 boxplots so a total of 6 individual boxplots altogether. Here is the *Boxplot-Petal* python script;
+The purpose of this Boxplot is to plot the Iris dataset on 2 different graphs based on the 3 Iris flower species *Setosa, Versicolor and Virginica* treated separately based on *Petal* attribute only with its 2 sub-attributes *Petal_length and Petal_Width*. This results in having 2 separate graphs with each containing 3 boxplots so a total of 6 individual boxplots altogether. Here is the *Boxplot-Petal* python script;
 
 ```python
 # Etem Kaya 09-Apr-2019
@@ -497,9 +497,9 @@ plt.show()
 
 #### 2.2.2.  Histograms
 
-I used the Histogram method to graphically summarize and display the distribution of the Iris data set. As we know from Data Analytics, a histogram  is a vertical bar chart that depicts the distribution of a set of data and can be constructed by segmenting the range of the data into equal sized bins (e.g. segments, groups or classes). The vertical axis of the histogram is labeled "Count or Frequency" and indicates how many times the event occurred (the number of counts for each bin).
+I used the Histogram method to graphically summarize and display the distribution of the Iris data set. As we know from Data Analytics, a histogram  is a vertical bar chart that depicts the distribution of a set of data and can be constructed by segmenting the range of the data into equal sized bins (e.g. segments, groups or classes). The vertical axis of the histogram is labelled "Count or Frequency" and indicates how many times the event occurred (the number of counts for each bin).
 
-On the other hand ,the horizontal axis of the histogram is labeled with the range of the numerical variables from our dataset. We then determine the number of data points that reside within each bin and that is how we construct the histogram chart. We used the histogram when we want to;
+On the other hand ,the horizontal axis of the histogram is labelled with the range of the numerical variables from our dataset. We then determine the number of data points that reside within each bin and that is how we construct the histogram chart. We used the histogram when we want to;
 • Summarize large data sets graphically
 • Compare measurements with specifications
 • Communicate information graphically
@@ -509,7 +509,7 @@ The following are the 7 Histograms that I generated for this project using Pytho
 
 ##### i. Histogram All Species
 
-The purpose of this Histogram is to present the entire dataset concidering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with its 4 different attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*, so each attribute is shown in a sperate histogram so a total of 4 histograms altogether. Here is the *Histogram-All-Species* python script;
+The purpose of this Histogram is to present the entire dataset considering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with its 4 different attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*, so each attribute is shown in a sperate histogram so a total of 4 histograms altogether. Here is the *Histogram-All-Species* python script;
 
 ```python
 # Etem Kaya 12-Apr-2019
@@ -556,7 +556,7 @@ plt.show()
 
 ##### ii. Histogram Grouped
 
-The purpose of this Histogram is to present the entire dataset concidering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*, so each attribute is being the X axis in each histogram shown so a total of 4 histograms all grouped together and shown in a single graph. Here is the *Histogram-Grouped* python script;
+The purpose of this Histogram is to present the entire dataset considering all 3 species *Setosa, Versicolor and Virginica* treated as one dataset with all 4 attributes *Sepal_length, Sepal_Width, Petal_length, Petal_Width*, so each attribute is being the X axis in each histogram shown so a total of 4 histograms all grouped together and shown in a single graph. Here is the *Histogram-Grouped* python script;
 
 ```python
 # Etem Kaya 11-Apr-2019
@@ -584,7 +584,7 @@ plt.show()
 
 ##### iii. Histogram Sepal
 
-The purpose of this Histogram is to present each Iris species *Setosa, Versicolor and Virginica* seperately with each species having its own histogram so 3 histograms shown together. The variable of the histogram on the X axis is the *Sepal* attribute of the dataset. Since the *Sepal* has 2 sub-attributes *Sepal_Length* and *Sepal_Width*, the X axis of each graph is *Sepal_Length* and *Sepal_Width* respectively. So there are 2 seperate graphs with each showing 3 histograms one for each species of Iris flower dataset so a total of 6 histograms. Here is the *Histogram-Sepal* python script;
+The purpose of this Histogram is to present each Iris species *Setosa, Versicolor and Virginica* separately with each species having its own histogram so 3 histograms shown together. The variable of the histogram on the X axis is the *Sepal* attribute of the dataset. Since the *Sepal* has 2 sub-attributes *Sepal_Length* and *Sepal_Width*, the X axis of each graph is *Sepal_Length* and *Sepal_Width* respectively. So there are 2 separate graphs with each showing 3 histograms one for each species of Iris flower dataset so a total of 6 histograms. Here is the *Histogram-Sepal* python script;
 
 ```python
 # Etem Kaya 12-Apr-2019
@@ -631,7 +631,7 @@ plt.show()
 
 ##### iv. Histogram Petal
 
-The purpose of this Histogram is to present each Iris species *Setosa, Versicolor and Virginica* seperately with each species having its own histogram so 3 histograms shown together. The variable of the histogram on the X axis is the *Petal* attribute of the dataset. Since the *Petal* has 2 sub-attributes *Petal_Length* and *Petal_Width*), the X axis of each graph is *Petal_Length* and *Petal_Width* respectively. So there are 2 seperate graphs with each showing 3 histograms one for each species of Iris flower dataset so a total of 6 histograms. Here is the *Histogram-Petal* python script;
+The purpose of this Histogram is to present each Iris species *Setosa, Versicolor and Virginica* separately with each species having its own histogram so 3 histograms shown together. The variable of the histogram on the X axis is the *Petal* attribute of the dataset. Since the *Petal* has 2 sub-attributes *Petal_Length* and *Petal_Width*), the X axis of each graph is *Petal_Length* and *Petal_Width* respectively. So there are 2 separate graphs with each showing 3 histograms one for each species of Iris flower dataset so a total of 6 histograms. Here is the *Histogram-Petal* python script;
 
 ```python
 # Etem Kaya 12-Apr-2019
@@ -678,7 +678,7 @@ plt.show()
 
 ##### v. Histogram Setosa
 
-The purpose of this Histogram is to present the *Setosa* sepicies only with all 4 attributes on seperate histograms. The variable of the histogram on the X axis is the *Sepal and Petal* attributes. Since both *Sepal and Petal* attributes have 2 sub-attributes each (*Sepal_Length, Sepal_Width, Petal_Length and Petal_Width*), there are 4 seperate histograms on 4 different graphs with each showing 1 histogram of *Setosa* species. The last 2 graphs are to show both *Sepal_Lenght and Sepal_Width* histograms in one geraph and to show the *Petal_Lenght and Petal_Width* histograms on another graph. Here is the *Histogram-Setosa* python script;
+The purpose of this Histogram is to present the *Setosa* species only with all 4 attributes on separate histograms. The variable of the histogram on the X axis is the *Sepal and Petal* attributes. Since both *Sepal and Petal* attributes have 2 sub-attributes each (*Sepal_Length, Sepal_Width, Petal_Length and Petal_Width*), there are 4 separate histograms on 4 different graphs with each showing 1 histogram of *Setosa* species. The last 2 graphs are to show both *Sepal_Length and Sepal_Width* histograms in one graph and to show the *Petal_Length and Petal_Width* histograms on another graph. Here is the *Histogram-Setosa* python script;
 
 ```python
 # Etem Kaya 12-Apr-2019
@@ -749,7 +749,7 @@ plt.show()
 
 ##### vi. Histogram Versicolor
 
-The purpose of this Histogram is to present the *Versicolor* sepicies only with all 4 attributes on seperate histograms. The variable of the histogram on the X axis is the *Sepal and Petal* attributes. Since both *Sepal and Petal* attributes have 2 sub-attributes each (*Sepal_Length, Sepal_Width, Petal_Length and Petal_Width*), there are 4 seperate histograms on 4 different graphs with each showing 1 histogram of *Versicolor* species. The last 2 graphs are to show both *Sepal_Lenght and Sepal_Width* histograms in one geraph and to show the *Petal_Lenght and Petal_Width* histograms on another graph. Here is the *Histogram-Versicolor* python script;
+The purpose of this Histogram is to present the *Versicolor* species only with all 4 attributes on separate histograms. The variable of the histogram on the X axis is the *Sepal and Petal* attributes. Since both *Sepal and Petal* attributes have 2 sub-attributes each (*Sepal_Length, Sepal_Width, Petal_Length and Petal_Width*), there are 4 separate histograms on 4 different graphs with each showing 1 histogram of *Versicolor* species. The last 2 graphs are to show both *Sepal_Length and Sepal_Width* histograms in one graph and to show the *Petal_Length and Petal_Width* histograms on another graph. Here is the *Histogram-Versicolor* python script;
 
 ```python
 # Etem Kaya 12-Apr-2019
@@ -820,7 +820,7 @@ plt.show()
 
 ##### vii. Histogram Virginica
 
-The purpose of this Histogram is to present the *Virginica* sepicies only with all 4 attributes on seperate histograms. The variable of the histogram on the X axis is the *Sepal and Petal* attributes. Since both *Sepal and Petal* attributes have 2 sub-attributes each (*Sepal_Length, Sepal_Width, Petal_Length and Petal_Width*), there are 4 seperate histograms on 4 different graphs with each showing 1 histogram of *Virginica* species. The last 2 graphs are to show both *Sepal_Lenght and Sepal_Width* histograms in one geraph and to show the *Petal_Lenght and Petal_Width* histograms on another graph. Here is the *Histogram-Virginica* python script;
+The purpose of this Histogram is to present the *Virginica* species only with all 4 attributes on separate histograms. The variable of the histogram on the X axis is the *Sepal and Petal* attributes. Since both *Sepal and Petal* attributes have 2 sub-attributes each (*Sepal_Length, Sepal_Width, Petal_Length and Petal_Width*), there are 4 separate histograms on 4 different graphs with each showing 1 histogram of *Virginica* species. The last 2 graphs are to show both *Sepal_Length and Sepal_Width* histograms in one graph and to show the *Petal_Length and Petal_Width* histograms on another graph. Here is the *Histogram-Virginica* python script;
 
 ```python
 # Etem Kaya 12-Apr-2019
@@ -891,17 +891,17 @@ plt.show()
 
 #### 2.2.3. Scatter Plots
 
-I used the Scatterplot method to plot the dataset and show the relationship between two numeric variables like *Sepal_Length vs Sepal_Width* and *Petal_Length vs Peatl_Width*. As we know from Data Analytics, the Scatter plots are sometimes called correlation plots because they show how two variables are correlated. In the length and width example, the chart shows the relationship between length and width.
+I used the Scatterplot method to plot the dataset and show the relationship between two numeric variables like *Sepal_Length vs Sepal_Width* and *Petal_Length vs Petal_Width*. As we know from Data Analytics, the Scatter plots are sometimes called correlation plots because they show how two variables are correlated. In the length and width example, the chart shows the relationship between length and width.
 
-1. When the Y variable tends to increase as the X variable increases, thre is a positive correlation between the X and Y variables.
-2. When the Y variable tends to decrease as the X variable increases or vice versa, thre is a negative correlation between the x AND y variables.
+1. When the Y variable tends to increase as the X variable increases, there is a positive correlation between the X and Y variables.
+2. When the Y variable tends to decrease as the X variable increases or vice versa, there is a negative correlation between the x AND y variables.
 3. When there is no clear relationship between the two variables, there is no correlation between the Y and X variables.
 
 The following are the 3 Scatterplots that I generated for this project using Python;
 
 ##### i. Scatterplot All Species
 
-The purpose of this Scatterplot is to plot the entire Iris dataset with all 3 species *Setosa, Versicolor and Virginica* each species having their own scatterplot in 2 different graphs. On the first graph, the *Sepal_Lenght* is the X axis and the *Sepal_Width* is the Y axis. On the other graph, the *Petal_Length* is the X axis and the *Petal_Width* is the Y axis. Here is the *Scatterplot-All-Species* python script;
+The purpose of this Scatterplot is to plot the entire Iris dataset with all 3 species *Setosa, Versicolor and Virginica* each species having their own scatterplot in 2 different graphs. On the first graph, the *Sepal_Length* is the X axis and the *Sepal_Width* is the Y axis. On the other graph, the *Petal_Length* is the X axis and the *Petal_Width* is the Y axis. Here is the *Scatterplot-All-Species* python script;
 
 ```python
 # Etem Kaya 12-Apr-2019
@@ -933,7 +933,7 @@ plt.show()
 
 ##### ii. Scatterplot Sepal
 
-The purpose of this Scatterplot is to plot each species of the Iris dataset seperately on a different graph so all 3 species *Setosa, Versicolor and Virginica* having their own scatterplot in 3 different graphs. In each scatterplot, the *Sepal_Lenght* is the X axis and the *Sepal_Width* is the Y axis. Here is the *Scatterplot-Setosa* python script;
+The purpose of this Scatterplot is to plot each species of the Iris dataset separately on a different graph so all 3 species *Setosa, Versicolor and Virginica* having their own scatterplot in 3 different graphs. In each scatterplot, the *Sepal_Length* is the X axis and the *Sepal_Width* is the Y axis. Here is the *Scatterplot-Setosa* python script;
 
 ```python
 # Etem Kaya 12-Apr-2019
@@ -979,7 +979,7 @@ plt.show()
 
 ##### iii. Scatterplot Petal
 
-The purpose of this Scatterplot is to plot each species of the Iris dataset seperately on a different graph so all 3 species *Setosa, Versicolor and Virginica* having their own scatterplot in 3 different graphs. In each scatterplot, the *Petal_Lenght* is the X axis and the *Petal_Width* is the Y axis. Here is the *Scatterplot-Petal* python script;
+The purpose of this Scatterplot is to plot each species of the Iris dataset separately on a different graph so all 3 species *Setosa, Versicolor and Virginica* having their own scatterplot in 3 different graphs. In each scatterplot, the *Petal_Length* is the X axis and the *Petal_Width* is the Y axis. Here is the *Scatterplot-Petal* python script;
 
 ```python
 # Etem Kaya 12-Apr-2019
@@ -1027,15 +1027,15 @@ plt.show()
 
 The Iris Flower dataset is by far one of the best known dataset and widely used in the Data Science field. It is famous and commonly used by those who are trying to get their hands on Data Analytics and Machine Learning. Over the last number of years, there has been a huge amount of analysis performed using the Iris dataset as it has been the benchmark for data analysis. It is an nice and a simple dataset and contains relatively simple number of measurements that can easily be used to differentiate it from other dataset. It also allows testing for various algorithms for machine learning.
 
-The scatter plots indicates that borh *Petal length* and *Petal Width* stand out defining individual features for *Iris Setosa* species. The *Sepal Width* has the least variation in mean values and indicates that it is not the best feature to use to clasify the the Iris species. Plots and histograms showed how unique the *Sepal Lenght, Sepal Width, Petal length and Petal Width* are for each species (*Setose, Versicolor and Virginica*).
+The scatter plots indicates that both *Petal length* and *Petal Width* stand out defining individual features for *Iris Setosa* species. The *Sepal Width* has the least variation in mean values and indicates that it is not the best feature to use to classify the the Iris species. Plots and histograms showed how unique the *Sepal Length, Sepal Width, Petal length and Petal Width* are for each species (*Setose, Versicolor and Virginica*).
 
-The Python libraries such as Pandas, Seaborn and Matplotlib are widely used in this project. They are powerful libraires and yet easy to use to analyse any dataset. Pands and Seaborn libraries are easy to work with escpacially when analysing labelled data. Using Panda and Seaborn, I found it easier to import the csv file, espacially the Panda library simplified the process of data import and manipulation. Splitting dataset with Seaborn was also very handy and made my work easier. For plotting charts and graphs, I found Matplotlib and Seaborn extremely usefull packages.
+The Python libraries such as Pandas, Seaborn and Matplotlib are widely used in this project. They are powerful libraries and yet easy to use to analyse any dataset. Pandas and Seaborn libraries are easy to work with especially when analysing labelled data. Using Panda and Seaborn, I found it easier to import the csv file, especially the Panda library simplified the process of data import and manipulation. Splitting dataset with Seaborn was also very handy and made my work easier. For plotting charts and graphs, I found Matplotlib and Seaborn extremely useful packages.
 
-Although I am familiar with data analysis to some degree as I deal with time series manufacturing process data at my work using diverse analytical tools e.g. Spotfire, SQL Reporiting Services, Excel BI, Power BI, OSIsoft PI etc., and generate custom reports for senior management to analyse the data for beter decision making, I admit that dealing with any dataset can be challanging.
+Although I am familiar with data analysis to some degree as I deal with time series manufacturing process data at my work using diverse analytical tools e.g. Spotfire, SQL Reporting Services, Excel BI, Power BI, OSIsoft PI etc., and generate custom reports for senior management to analyse the data for better decision making, I admit that dealing with any dataset can be challenging.
 
-A key learning from this project is that it is important to understand the dataset first, then where to start manupulating data, how to exctract sub-sets from large dataset, hot to drill down, chop, slice and dice it to the size in which we are interested.
+A key learning from this project is that it is important to understand the dataset first, then where to start manipulating data, how to extract sub-sets from large dataset, hot to drill down, chop, slice and dice it to the size in which we are interested.
 
-Finally a few words on GitHub as it is an excellent repisotory to store project documents and code developed to share them with others. For me GitHub is still a learning experience, but it is  an excellent tool for maintaining codes and software projects. I did a little with Markdown previously when I was learning R programing last year in UCD. It is easy to use and does help alot producing high quality documents in a very short time-frame.
+Finally a few words on GitHub as it is an excellent repository to store project documents and code developed to share them with others. For me GitHub is still a learning experience, but it is  an excellent tool for maintaining codes and software projects. I did a little with Markdown previously when I was learning R programming last year in UCD. It is easy to use and does help a lot producing high quality documents in a very short time-frame.
 
 ## 4. References
 
