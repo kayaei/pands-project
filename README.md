@@ -1024,26 +1024,19 @@ plt.show()
 
 ## 3. Conclusion and Summary
 
-The Iris Flower dataset is by far one of the best known dataset and widely used in the Data Science field. It is very famous and commonly used by those who are trying to get their hands on Data Analytics and Machine Learning. Over the last number of years, there has been a huge amount of analysis performed using the Iris dataset as it has been the benchmark for data analysis. It is an nice and a simple dataset and easy to deal with. It also allows testing various algorithms for machine learning.
+The Iris Flower dataset is by far one of the best known dataset and widely used in the Data Science field. It is famous and commonly used by those who are trying to get their hands on Data Analytics and Machine Learning. Over the last number of years, there has been a huge amount of analysis performed using the Iris dataset as it has been the benchmark for data analysis. It is an nice and a simple dataset and contains relatively simple number of measurements that can easily be used to differentiate it from other dataset. It also allows testing for various algorithms for machine learning.
 
-The scatter plots indicates that borh *Petal length* and *Petal Width* stand out defining individual features for *Iris Setosa* species. The *Sepal Width* has the least variation in mean values and indicates that it is not the best feature to use to clasify the the Iris species.
+The scatter plots indicates that borh *Petal length* and *Petal Width* stand out defining individual features for *Iris Setosa* species. The *Sepal Width* has the least variation in mean values and indicates that it is not the best feature to use to clasify the the Iris species. Plots and histograms showed how unique the *Sepal Lenght, Sepal Width, Petal length and Petal Width* are for each species (*Setose, Versicolor and Virginica*).
 
-The Python libraries such as Pandas, Seaborn and Matplotlib are widely used in this project. They are powerful libraires and yet easy to use to analyse the Iris dataset. Out of all libraries, Pandas and Seaboarn are the 2 of my favourites then followed by the MatPlotlib. Pands and Seaborn libraries are easy to work with escpacially when analysing labelled data.
+The Python libraries such as Pandas, Seaborn and Matplotlib are widely used in this project. They are powerful libraires and yet easy to use to analyse any dataset. Pands and Seaborn libraries are easy to work with escpacially when analysing labelled data. Using Panda and Seaborn, I found it easier to import the csv file, espacially the Panda library simplified the process of data import and manipulation. Splitting dataset with Seaborn was also very handy and made my work easier. For plotting charts and graphs, I found Matplotlib and Seaborn extremely usefull packages.
 
-Although I am familiar with data analysis to soem degree as I deal with big and time series manufacturing and process data at my work, I do use diverse analytical tools e.g. Spotfire, SQL Reporiting Services, Excel BI, Power BI etc. to analyse the data and generate customs reports. I must acknowledge that Python is so handy and will help a lot in my work. It is equally important to admit that dealing with any dataset can be challanging. 
+Although I am familiar with data analysis to some degree as I deal with time series manufacturing process data at my work using diverse analytical tools e.g. Spotfire, SQL Reporiting Services, Excel BI, Power BI, OSIsoft PI etc., and generate custom reports for 
+senior management to analyse the data for beter decision making, I admit that dealing with any dataset can be challanging. 
 
-A key learning from this project is that it is important to understand how to start manupulating data, exctracting sub-set from the large dataset, drill down, chop or slide and dice the dataset to the size in which we are interested.
-Note: I did not explore any machine learning as part of thsi project and therefore I did not use the Scikit-learn library. 
+A key learning from this project is that it is important to understand the dataset first, then where to start manupulating data, how to 
+exctract sub-sets from large dataset, hot to drill down, chop, slice and dice it to the size in which we are interested.
 
-Finally the GitHub is an excellent repisotory to store project documents and any code developed and to share them with others. For me GitHub is still a learning experience. It is an excellent tool for maintaining codes and software projects. I did a little with Markdown previously when I was learning R programing last year in UCD. It is easy to use and does help producing high quality documents in a very short time-frame.
-
-Sepal width has the least variation in mean values for features implying it is not a good feature by which Iris species could be classified.
-
-The Iris Data set contains a relatively simple number of measurements which can be elegantly used to statistically differentiate different data sets and use those data sets to develop mechine learning algorithms to predict and classify unknowns.
-
-Initial attempts to import the csv file and split it using basic python code proved cumbersome. The Pandas library simplified the process of data import and manipulation as seen in the Irisdata_mean.py script and in subsequent work.
-
-Plots and histograms in the Iris_Data_np_v2.py file showed how unique the sepal lengths, widths and petal lengths and widths are for each species. 
+Finally a few words on GitHub as it is an excellent repisotory to store project documents and code developed to share them with others. For me GitHub is still a learning experience, but it is  an excellent tool for maintaining codes and software projects. I did a little with Markdown previously when I was learning R programing last year in UCD. It is easy to use and does help alot producing high quality documents in a very short time-frame.
 
 ## 4. References
 
