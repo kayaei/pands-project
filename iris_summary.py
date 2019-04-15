@@ -15,7 +15,7 @@ print(str(f.shape) + "\n") # total row and column count
 print(str(f.head()) + "\n") # print first 5 rows
 print(str(f.tail()) + "\n") # print last 5 rows
 print(str(f.sample(5)) + "\n") # output 5 random rows
-print((f.columns) + "\n") # column names of the dataset
+print((f.columns), "\n") # column names of the dataset
 
 # adopted from https://stackoverflow.com/a/29530559
 print("\n" + str(f.isnull().any()) + "\n") # find any null values
