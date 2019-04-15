@@ -38,7 +38,7 @@ The Iris flower data set is a multivariate data set introduced by the British st
 
 This dataset is by far one of the best known and commonly used datasets in the Data Science as it is very famous and widely used by everyone trying to learn machine learning and statistics. It is sometimes called Anderson's Iris data set because Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers of three related species.
 
-The dataset consists of 50 samples from each of three species of Iris ([Setosa](https://github.com/kayaei/pands-project/blob/master/iris_setosa.jpg), [Versicolor](https://github.com/kayaei/pands-project/blob/master/iris_versicolor.jpg) and [Virginica](https://github.com/kayaei/pands-project/blob/master/iris_virginica.jpg)). 
+The dataset consists of 50 samples from each of three species of Iris ([Setosa](https://github.com/kayaei/pands-project/blob/master/iris_setosa.jpg), [Versicolor](https://github.com/kayaei/pands-project/blob/master/iris_versicolor.jpg) and [Virginica](https://github.com/kayaei/pands-project/blob/master/iris_virginica.jpg)).
 
 Four features were measured from each sample: the length and the width of the [Sepals and Petals](https://github.com/kayaei/pands-project/blob/master/iris_petal-sepal.jpg), in centimeters. The fifth column is the species names of the flower observed. Based on the combination of these four features, Fisher developed a linear discriminant model to distinguish the species from each other, and based on Fisher's linear discriminant model, this data set became a typical test case for many statistical classification techniques in machine learning.
 For more information on this dataset, refer to [Wikipedia](https://en.wikipedia.org/wiki/Iris_flower_data_set).
@@ -244,7 +244,7 @@ print("\n")
 print("Mean of Versicolor species")
 print(f.iloc[50:100].mean()) # mean of versicolor using iloc function
 print("\n")
-print("Mean of Virginica species")    
+print("Mean of Virginica species")
 print(f.iloc[100:150].mean()) # mean of virginica using iloc function
 ```
 
@@ -402,7 +402,7 @@ plt.title("Iris Flower Species BoxPlot") # title of the plot
 
 # set the boxplot style
 sns.set(style="darkgrid", color_codes=True) # set the background colour
-sns.boxplot(data=f) # set the dataset to plot     
+sns.boxplot(data=f) # set the dataset to plot
 
 # plot the data
 plt.show()
@@ -891,8 +891,9 @@ plt.show()
 
 #### 2.2.3. Scatter Plots
 
-I used the Scatterplot method to plot the dataset and show the relationship between two numeric variables like *Sepal_Length vs Sepal_Width* and *Petal_Length vs Peatl_Width*. As we know from Data Analytics, the Scatter plots are sometimes called correlation plots because they show how two variables are correlated. In the length and width example, the chart shows the relationship between length and width. 
-1. When the Y variable tends to increase as the X variable increases, thre is a positive correlation between the X and Y variables. 
+I used the Scatterplot method to plot the dataset and show the relationship between two numeric variables like *Sepal_Length vs Sepal_Width* and *Petal_Length vs Peatl_Width*. As we know from Data Analytics, the Scatter plots are sometimes called correlation plots because they show how two variables are correlated. In the length and width example, the chart shows the relationship between length and width.
+
+1. When the Y variable tends to increase as the X variable increases, thre is a positive correlation between the X and Y variables.
 2. When the Y variable tends to decrease as the X variable increases or vice versa, thre is a negative correlation between the x AND y variables.
 3. When there is no clear relationship between the two variables, there is no correlation between the Y and X variables.
 
@@ -1030,11 +1031,9 @@ The scatter plots indicates that borh *Petal length* and *Petal Width* stand out
 
 The Python libraries such as Pandas, Seaborn and Matplotlib are widely used in this project. They are powerful libraires and yet easy to use to analyse any dataset. Pands and Seaborn libraries are easy to work with escpacially when analysing labelled data. Using Panda and Seaborn, I found it easier to import the csv file, espacially the Panda library simplified the process of data import and manipulation. Splitting dataset with Seaborn was also very handy and made my work easier. For plotting charts and graphs, I found Matplotlib and Seaborn extremely usefull packages.
 
-Although I am familiar with data analysis to some degree as I deal with time series manufacturing process data at my work using diverse analytical tools e.g. Spotfire, SQL Reporiting Services, Excel BI, Power BI, OSIsoft PI etc., and generate custom reports for 
-senior management to analyse the data for beter decision making, I admit that dealing with any dataset can be challanging. 
+Although I am familiar with data analysis to some degree as I deal with time series manufacturing process data at my work using diverse analytical tools e.g. Spotfire, SQL Reporiting Services, Excel BI, Power BI, OSIsoft PI etc., and generate custom reports for senior management to analyse the data for beter decision making, I admit that dealing with any dataset can be challanging.
 
-A key learning from this project is that it is important to understand the dataset first, then where to start manupulating data, how to 
-exctract sub-sets from large dataset, hot to drill down, chop, slice and dice it to the size in which we are interested.
+A key learning from this project is that it is important to understand the dataset first, then where to start manupulating data, how to exctract sub-sets from large dataset, hot to drill down, chop, slice and dice it to the size in which we are interested.
 
 Finally a few words on GitHub as it is an excellent repisotory to store project documents and code developed to share them with others. For me GitHub is still a learning experience, but it is  an excellent tool for maintaining codes and software projects. I did a little with Markdown previously when I was learning R programing last year in UCD. It is easy to use and does help alot producing high quality documents in a very short time-frame.
 
