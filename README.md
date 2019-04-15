@@ -12,7 +12,7 @@
 
 ### Year and Semester: 2019 - 01
 
-### Software and Version: Python - Version 3.7
+### Software and Version: Python - Version 3.7 and Jupiter Notebook
 
 This repository contains my research, investigation and exploration of the Fisher's Iris Dataset along withy my analysis using Python programming language required for Project 2019, "Programming and Scripting" at GMIT.
 
@@ -52,35 +52,35 @@ Iris Flower Species;
 
 The objective of this project is to research and explore Fisher's Iris Dataset and write Python code to analyse the dataset, and finally summarise it with our findings and conclusion.
 
-## 2.  Research and Analysis of Iris Dataset
+## 2. Research and Analysis of Iris Dataset
 
-### 2.1.  Analysis of Iris Dataset
+### 2.1. Analysis of Iris Dataset
 
-#### 2.1.1.   Pyton Libraries
+#### 2.1.1. Pyton Libraries
 
 In my Iris Dataset analysis, I used the following libraries;
 
-##### Pandas
+##### i. Pandas
 
 The Panda is a very useful library when analyzing data with Python and is one of the most widely used packaged in data science. The pandas is a library and used for importing labelled data such as the iris data set. It makes data such as csv files much easier to work with as it will take in a a csv file and creates a python object. It is an open source. Further information can be found at the <http://pandas.pydata.org/>.
 
-##### Numpy
+##### ii. Numpy
 
 The NumPy is a fundamental package for scientific computation in python. It is particularly useful as a container for multidimensional data which makes NumPy arrays easy to work with, so it is much faster and easier to manipulate the NumPy arrays. This allows NumPy to seamlessly integrate with a wide variety of databases. NumPy is particularly useful for importing the dataset as an array (matrix) or list on which various functions could be applied. For more information, refer to <https://docs.scipy.org/doc/numpy/index.html> and <https://www.numpy.org/>.
 
-##### Matplotlib
+##### iii. Matplotlib
 
 The Matplotlib python library is used to make charts such as histograms, plots and bar charts. The pyplot module is commonly used to generate some rich histograms graphs from the dataset given. For further information, refer to <https://matplotlib.org/>
 
-##### Seaborn
+##### iv. Seaborn
 
 The Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics. Further information can be found at <https://seaborn.pydata.org/index.html> and <https://seaborn.pydata.org/generated/seaborn.PairGrid.html#seaborn.PairGrid>.
 
-##### Scikitlearn
+##### v. Scikitlearn
 
 Although I didn’t need to use the Scikitlearn, it is a very useful library for carrying out machine learning in python as it contains many machine learning models which may be used to explore data sets. Scikitlearn already has built in code to handle the machine learning analysis of large data sets. Further information can be found at <http://scikit-learn.org/stable/tutorial/basic/tutorial.html>.
 
-#### 2.1.2.  Reading the CSV File
+#### 2.1.2. Reading the CSV File
 
 I downloaded the Iris dataset from the <https://gist.github.com/curran/a08a1080b88344b0c8a7> GitHub repository. Once downloaded, I then stored it in a CSV file called 'iris_dataset.csv'. I mostly used the Pandas library to read the content of my 'iris_dataset' csv file by using the (f = pd.read_csv("iris_dataset.csv")) script in my python code and this worked well. In few occasions, I also used the Seaborn library to read the csv file with the (f = sns.load_dataset("iris")) script. This dataset I downloaded already included the column names, so I did not need to write any additional code to add the column names in my python scripts. However, as part of my research, I have found few different ways to add missing column names, but I did not need it in my case anyway. Here are the two examples of my python scripts to read the csv file with Pandas and Seaborn libraries;
 
@@ -130,55 +130,55 @@ print(f["species"].value_counts()) # row count in each species
 
 The above python script will give a quick snapshot of the following charecteristics of the Iris dataset;
 
-##### Info
+##### i. Info
 
 A brief information of the entire dataset e.g. name of all columns, total number of rows in each column, datatype in each column, total number of columns, data range and memory usage.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_information.jpg "Information of the dataset")
 
-##### Description
+##### ii. Description
 
 A statistical summary of each numeric columns e.g. 'column names, row count, mean, min, max, standard deviation, 25%th, 50%th and 75%th percentile' for numeric columns.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_description.jpg "Description of the dataset")
 
-##### Shape
+##### iii. Shape
 
 Dimension of the dataset e.g. the total number of rows and column in the dataset.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_shape.jpg "Dimension of the dataset")
 
-##### Head
+##### iv. Head
 
 Lists the top 5 rows from the dataset.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_head.jpg "Top 5 rows of the dataset")
 
-##### Tail
+##### v. Tail
 
 Lists Last 5 rows from the dataset.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_tail.jpg "Last 5 rows of the dataset")
 
-##### Sample
+##### vi. Sample
 
 Lists Random 5 rows from the dataset.
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_sample.jpg "Random 5 rows of the dataset")
 
-##### Columns
+##### vii. Columns
 
 Lists the column names of the dataset
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_columns.jpg "Column names of the dataset")
 
-##### IsNull
+##### viii. IsNull
 
 Finds the null values of the dataset
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_isnull.jpg "Null values of the dataset")
 
-##### Value_Counts
+##### ix. Value_Counts
 
 Gives the row count of the dataset
 
@@ -364,9 +364,9 @@ print(f.describe(), "\n")
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_describe.jpg "Pivot and Describe of the dataset")
 
-### 2.2.   Visulasation of Iris Dataset
+### 2.2. Visulasation of Iris Dataset
 
-#### 2.2.1.  Box Plots
+#### 2.2.1. Box Plots
 
 I used the Boxplot method to plot the dataset and analyse it whether it is symmetric or skewed to the left or right. As we know from Data Analytics, a Boxplot is the visual representation of the statistical five number summary of a given data set. The five number summary includes;
 
@@ -889,7 +889,7 @@ plt.show()
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_histogram-virginica.jpg "Histogram-Virginica")
 
-#### 2.2.3.  Scatter Plots
+#### 2.2.3. Scatter Plots
 
 I used the Scatterplot method to plot the dataset and show the relationship between two numeric variables like *Sepal_Length vs Sepal_Width* and *Petal_Length vs Peatl_Width*. As we know from Data Analytics, the Scatter plots are sometimes called correlation plots because they show how two variables are correlated. In the length and width example, the chart shows the relationship between length and width. 
 1. When the Y variable tends to increase as the X variable increases, thre is a positive correlation between the X and Y variables. 
@@ -1022,24 +1022,44 @@ plt.show()
 
 ![alt text](https://github.com/kayaei/pands-project/blob/master/iris_scatterplot-petal.jpg "Scatterplot-Petal")
 
-## 3  Conclusion
+## 3. Conclusion and Summary
 
+The Iris Flower dataset is by far one of the best known dataset and widely used in the Data Science field. It is very famous and commonly used by those who are trying to get their hands on Data Analytics and Machine Learning. Over the last number of years, there has been a huge amount of analysis performed using the Iris dataset as it has been the benchmark for data analysis. It is an nice and a simple dataset and easy to deal with. It also allows testing various algorithms for machine learning.
 
+The scatter plots indicates that borh *Petal length* and *Petal Width* stand out defining individual features for *Iris Setosa* species. The *Sepal Width* has the least variation in mean values and indicates that it is not the best feature to use to clasify the the Iris species.
 
-## 4  References
+The Python libraries such as Pandas, Seaborn and Matplotlib are widely used in this project. They are powerful libraires and yet easy to use to analyse the Iris dataset. Out of all libraries, Pandas and Seaboarn are the 2 of my favourites then followed by the MatPlotlib. Pands and Seaborn libraries are easy to work with escpacially when analysing labelled data.
+
+Although I am familiar with data analysis to soem degree as I deal with big and time series manufacturing and process data at my work, I do use diverse analytical tools e.g. Spotfire, SQL Reporiting Services, Excel BI, Power BI etc. to analyse the data and generate customs reports. I must acknowledge that Python is so handy and will help a lot in my work. It is equally important to admit that dealing with any dataset can be challanging. 
+
+A key learning from this project is that it is important to understand how to start manupulating data, exctracting sub-set from the large dataset, drill down, chop or slide and dice the dataset to the size in which we are interested.
+Note: I did not explore any machine learning as part of thsi project and therefore I did not use the Scikit-learn library. 
+
+Finally the GitHub is an excellent repisotory to store project documents and any code developed and to share them with others. For me GitHub is still a learning experience. It is an excellent tool for maintaining codes and software projects. I did a little with Markdown previously when I was learning R programing last year in UCD. It is easy to use and does help producing high quality documents in a very short time-frame.
+
+Sepal width has the least variation in mean values for features implying it is not a good feature by which Iris species could be classified.
+
+The Iris Data set contains a relatively simple number of measurements which can be elegantly used to statistically differentiate different data sets and use those data sets to develop mechine learning algorithms to predict and classify unknowns.
+
+Initial attempts to import the csv file and split it using basic python code proved cumbersome. The Pandas library simplified the process of data import and manipulation as seen in the Irisdata_mean.py script and in subsequent work.
+
+Plots and histograms in the Iris_Data_np_v2.py file showed how unique the sepal lengths, widths and petal lengths and widths are for each species. 
+
+## 4. References
 
 1. Iris Flower Data set - <https://en.wikipedia.org/wiki/Iris_flower_data_set>
-2. Iris setosa photo - <https://en.wikipedia.org/wiki/Iris_setosa#/media/File:Kosaciec_szczecinkowaty_Iris_setosa.jpg>
-3. Iris versicolor photo - <https://en.wikipedia.org/wiki/Iris_versicolor#/media/File:Blue_Flag,_Ottawa.jpg>
-4. Iris virginica photo - <https://en.wikipedia.org/wiki/Iris_virginica#/media/File:Iris_virginica_2.jpg>
-5. Iris setosa species - <https://en.wikipedia.org/wiki/Iris_setosa>
-6. Iris versicolor species - <https://en.wikipedia.org/wiki/Iris_versicolor>
-7. Iris virginica species - <https://en.wikipedia.org/wiki/Iris_virginica>
-8. Iris Flower Data set '.csv' file - <https://gist.github.com/curran/a08a1080b88344b0c8a7>
-9. UCI Machine Learning Repository - <https://archive.ics.uci.edu/ml/datasets/iris>
-10. <https://www.kaggle.com/uciml/iris>
-11. <https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset>
-12. <https://www.ritchieng.com/machine-learning-iris-dataset/>
-13. <https://stackoverflow.com/a/29530559>
-14. <https://priagungkhusumanegara.github.io/data/Data_Visualization.html>
-15. <https://machinelearningmastery.com/machine-learning-in-python-step-by-step/>
+2. Iris Setosa species - <https://en.wikipedia.org/wiki/Iris_setosa>
+3. Iris Versicolor species - <https://en.wikipedia.org/wiki/Iris_versicolor>
+4. Iris Virginica species - <https://en.wikipedia.org/wiki/Iris_virginica>
+5. Iris Flower Data set '.csv' file - <https://gist.github.com/curran/a08a1080b88344b0c8a7>
+6. UCI Machine Learning Repository - <https://archive.ics.uci.edu/ml/datasets/iris>
+7. Seaborn Python package - <https://seaborn.pydata.org/introduction.html>
+8. Numpy Python package - <https://docs.scipy.org/doc/numpy/index.html>
+9. Matplotlib Library - <https://matplotlib.org/>
+10. Pandas Library <https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html>
+11. Data Visualization on Iris Dataset - <https://priagungkhusumanegara.github.io/data/Data_Visualization.html>
+12. Iris dataset on Kaggle - <https://www.kaggle.com/uciml/iris>
+13. Machine Learning with Iris dataset - <https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset>
+14. Machine Learning in Python - <https://machinelearningmastery.com/machine-learning-in-python-step-by-step/>
+15. <https://www.ritchieng.com/machine-learning-iris-dataset/>
+16. <https://stackoverflow.com/a/29530559>
